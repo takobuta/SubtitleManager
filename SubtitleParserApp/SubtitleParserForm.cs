@@ -16,6 +16,7 @@ namespace SubtitleParserApp {
 
         public SubtitleParserForm() {
             InitializeComponent();
+            GaijiInfoFilePathLabeltextBox1.Text = _gaijiReplaceInfoCsvPath;
             GaijiInfoFilePathLabeltextBox4.Text = _gaijiReplaceInfoCsvPath;
         }
 
@@ -64,6 +65,12 @@ namespace SubtitleParserApp {
             CutEndTimeTextBox1.Text = string.Empty;
         }
 
+        private void ReplaceGaijiCheckBox1_CheckedChanged(object sender, EventArgs e) {
+
+            SelectGaijiInfoFileButton1.Enabled = ReplaceGaijiCheckBox1.Checked;
+            GaijiInfoFilePathLabeltextBox1.Enabled = ReplaceGaijiCheckBox1.Checked;
+        }
+
         private void OutputButton1_Click(object sender, EventArgs e) {
 
             // 出力ファイルパスの生成
@@ -91,6 +98,46 @@ namespace SubtitleParserApp {
                 cutInfoSB.AppendLine(GetFormattedCutInfoString(cut));
             }
             srtContent += cutInfoSB.ToString();
+
+            // 外字の置換をする場合
+            if (ReplaceGaijiCheckBox1.Checked) {
+
+                // 文字置換情報CSVファイルを読み込む
+                string gaijiInfoCsvPath = GaijiInfoFilePathLabeltextBox1.Text;
+                List<GaijiReplaceInfo> gaijiReplaceInfos = new List<GaijiReplaceInfo>();
+                try {
+                    using (var reader = new StreamReader(gaijiInfoCsvPath, Encoding.UTF8)) {
+                        string line;
+                        while ((line = reader.ReadLine()) != null) {
+                            // CSVの各行をカンマで分割
+                            var parts = line.Split(new char[] { ',' }, 2);
+                            if (parts.Length == 2) {
+                                string target = parts[0].Trim();
+                                string replacement = parts[1].Trim();
+
+                                gaijiReplaceInfos.Add(
+                                    new GaijiReplaceInfo {
+                                        ReplaceTargetString = target,
+                                        AfterReplacementString = replacement
+                                    }
+                                );
+                            } else {
+                                // ここでは無視
+                                continue;
+                            }
+                        }
+                    }
+                } catch (Exception ex) {
+                    throw new Exception($"文字置換情報ファイルの読み込み中にエラーが発生しました: {ex.Message}");
+                }
+
+
+                srtContent = _subtitleService.ReplaceGaiji(srtContent, gaijiReplaceInfos);
+
+                if (srtContent.Contains("[外:")) {
+                    MessageBox.Show($"文字置換情報に含まれない外字が存在します");
+                }
+            }
 
             // ファイルに書き込む
             File.WriteAllText(outputPath, srtContent);
@@ -325,6 +372,6 @@ namespace SubtitleParserApp {
             File.WriteAllText(outputPath, replaceText);
 
             MessageBox.Show($"Subtitles saved to: {outputPath}");
-        }
+        }        
     }
 }

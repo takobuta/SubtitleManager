@@ -60,12 +60,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.EditStartTimeTextBox3 = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.ResultLabel4 = new System.Windows.Forms.Label();
+            this.OutputButton4 = new System.Windows.Forms.Button();
+            this.GaijiInfoFilePathLabeltextBox4 = new System.Windows.Forms.TextBox();
+            this.SelectGaijiInfoFileButton4 = new System.Windows.Forms.Button();
             this.FilePathLabeltextBox4 = new System.Windows.Forms.TextBox();
             this.SelectSubtitleFileButton4 = new System.Windows.Forms.Button();
-            this.GaijiInfoFilePathLabeltextBox4 = new System.Windows.Forms.TextBox();
-            this.SelectGaijiInfoFileButton = new System.Windows.Forms.Button();
-            this.OutputButton4 = new System.Windows.Forms.Button();
-            this.ResultLabel4 = new System.Windows.Forms.Label();
+            this.ReplaceGaijiCheckBox1 = new System.Windows.Forms.CheckBox();
+            this.GaijiInfoFilePathLabeltextBox1 = new System.Windows.Forms.TextBox();
+            this.SelectGaijiInfoFileButton1 = new System.Windows.Forms.Button();
             this.ProcessTabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -135,7 +138,7 @@
             // 
             // OutputButton1
             // 
-            this.OutputButton1.Location = new System.Drawing.Point(8, 297);
+            this.OutputButton1.Location = new System.Drawing.Point(9, 363);
             this.OutputButton1.Name = "OutputButton1";
             this.OutputButton1.Size = new System.Drawing.Size(137, 25);
             this.OutputButton1.TabIndex = 8;
@@ -145,7 +148,7 @@
             // 
             // CutResultTextBox1
             // 
-            this.CutResultTextBox1.Location = new System.Drawing.Point(9, 140);
+            this.CutResultTextBox1.Location = new System.Drawing.Point(9, 220);
             this.CutResultTextBox1.Multiline = true;
             this.CutResultTextBox1.Name = "CutResultTextBox1";
             this.CutResultTextBox1.ReadOnly = true;
@@ -178,6 +181,9 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.GaijiInfoFilePathLabeltextBox1);
+            this.tabPage1.Controls.Add(this.SelectGaijiInfoFileButton1);
+            this.tabPage1.Controls.Add(this.ReplaceGaijiCheckBox1);
             this.tabPage1.Controls.Add(this.FilePathLabeltextBox);
             this.tabPage1.Controls.Add(this.CutResultTextBox1);
             this.tabPage1.Controls.Add(this.OutputButton1);
@@ -439,7 +445,7 @@
             this.tabPage4.Controls.Add(this.ResultLabel4);
             this.tabPage4.Controls.Add(this.OutputButton4);
             this.tabPage4.Controls.Add(this.GaijiInfoFilePathLabeltextBox4);
-            this.tabPage4.Controls.Add(this.SelectGaijiInfoFileButton);
+            this.tabPage4.Controls.Add(this.SelectGaijiInfoFileButton4);
             this.tabPage4.Controls.Add(this.FilePathLabeltextBox4);
             this.tabPage4.Controls.Add(this.SelectSubtitleFileButton4);
             this.tabPage4.Location = new System.Drawing.Point(4, 27);
@@ -449,6 +455,41 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "④外字置換";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // ResultLabel4
+            // 
+            this.ResultLabel4.AutoSize = true;
+            this.ResultLabel4.Location = new System.Drawing.Point(20, 186);
+            this.ResultLabel4.Name = "ResultLabel4";
+            this.ResultLabel4.Size = new System.Drawing.Size(0, 18);
+            this.ResultLabel4.TabIndex = 19;
+            // 
+            // OutputButton4
+            // 
+            this.OutputButton4.Location = new System.Drawing.Point(9, 143);
+            this.OutputButton4.Name = "OutputButton4";
+            this.OutputButton4.Size = new System.Drawing.Size(137, 25);
+            this.OutputButton4.TabIndex = 18;
+            this.OutputButton4.Text = "出力";
+            this.OutputButton4.UseVisualStyleBackColor = true;
+            this.OutputButton4.Click += new System.EventHandler(this.OutputButton4_Click);
+            // 
+            // GaijiInfoFilePathLabeltextBox4
+            // 
+            this.GaijiInfoFilePathLabeltextBox4.Location = new System.Drawing.Point(152, 79);
+            this.GaijiInfoFilePathLabeltextBox4.Name = "GaijiInfoFilePathLabeltextBox4";
+            this.GaijiInfoFilePathLabeltextBox4.ReadOnly = true;
+            this.GaijiInfoFilePathLabeltextBox4.Size = new System.Drawing.Size(423, 25);
+            this.GaijiInfoFilePathLabeltextBox4.TabIndex = 16;
+            // 
+            // SelectGaijiInfoFileButton4
+            // 
+            this.SelectGaijiInfoFileButton4.Location = new System.Drawing.Point(9, 79);
+            this.SelectGaijiInfoFileButton4.Name = "SelectGaijiInfoFileButton4";
+            this.SelectGaijiInfoFileButton4.Size = new System.Drawing.Size(137, 25);
+            this.SelectGaijiInfoFileButton4.TabIndex = 15;
+            this.SelectGaijiInfoFileButton4.Text = "外字情報ファイル選択";
+            this.SelectGaijiInfoFileButton4.UseVisualStyleBackColor = true;
             // 
             // FilePathLabeltextBox4
             // 
@@ -468,40 +509,35 @@
             this.SelectSubtitleFileButton4.UseVisualStyleBackColor = true;
             this.SelectSubtitleFileButton4.Click += new System.EventHandler(this.SelectSubtitleFileButton4_Click);
             // 
-            // GaijiInfoFilePathLabeltextBox4
+            // ReplaceGaijiCheckBox1
             // 
-            this.GaijiInfoFilePathLabeltextBox4.Location = new System.Drawing.Point(152, 79);
-            this.GaijiInfoFilePathLabeltextBox4.Name = "GaijiInfoFilePathLabeltextBox4";
-            this.GaijiInfoFilePathLabeltextBox4.ReadOnly = true;
-            this.GaijiInfoFilePathLabeltextBox4.Size = new System.Drawing.Size(423, 25);
-            this.GaijiInfoFilePathLabeltextBox4.TabIndex = 16;
+            this.ReplaceGaijiCheckBox1.AutoSize = true;
+            this.ReplaceGaijiCheckBox1.Checked = true;
+            this.ReplaceGaijiCheckBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ReplaceGaijiCheckBox1.Location = new System.Drawing.Point(9, 140);
+            this.ReplaceGaijiCheckBox1.Name = "ReplaceGaijiCheckBox1";
+            this.ReplaceGaijiCheckBox1.Size = new System.Drawing.Size(195, 22);
+            this.ReplaceGaijiCheckBox1.TabIndex = 11;
+            this.ReplaceGaijiCheckBox1.Text = "外字が含まれる場合は置換する\r\n";
+            this.ReplaceGaijiCheckBox1.UseVisualStyleBackColor = true;
+            this.ReplaceGaijiCheckBox1.CheckedChanged += new System.EventHandler(this.ReplaceGaijiCheckBox1_CheckedChanged);
             // 
-            // SelectGaijiInfoFileButton
+            // GaijiInfoFilePathLabeltextBox1
             // 
-            this.SelectGaijiInfoFileButton.Location = new System.Drawing.Point(9, 79);
-            this.SelectGaijiInfoFileButton.Name = "SelectGaijiInfoFileButton";
-            this.SelectGaijiInfoFileButton.Size = new System.Drawing.Size(137, 25);
-            this.SelectGaijiInfoFileButton.TabIndex = 15;
-            this.SelectGaijiInfoFileButton.Text = "外字情報ファイル選択";
-            this.SelectGaijiInfoFileButton.UseVisualStyleBackColor = true;
+            this.GaijiInfoFilePathLabeltextBox1.Location = new System.Drawing.Point(152, 167);
+            this.GaijiInfoFilePathLabeltextBox1.Name = "GaijiInfoFilePathLabeltextBox1";
+            this.GaijiInfoFilePathLabeltextBox1.ReadOnly = true;
+            this.GaijiInfoFilePathLabeltextBox1.Size = new System.Drawing.Size(423, 25);
+            this.GaijiInfoFilePathLabeltextBox1.TabIndex = 18;
             // 
-            // OutputButton4
+            // SelectGaijiInfoFileButton1
             // 
-            this.OutputButton4.Location = new System.Drawing.Point(9, 143);
-            this.OutputButton4.Name = "OutputButton4";
-            this.OutputButton4.Size = new System.Drawing.Size(137, 25);
-            this.OutputButton4.TabIndex = 18;
-            this.OutputButton4.Text = "出力";
-            this.OutputButton4.UseVisualStyleBackColor = true;
-            this.OutputButton4.Click += new System.EventHandler(this.OutputButton4_Click);
-            // 
-            // ResultLabel4
-            // 
-            this.ResultLabel4.AutoSize = true;
-            this.ResultLabel4.Location = new System.Drawing.Point(20, 186);
-            this.ResultLabel4.Name = "ResultLabel4";
-            this.ResultLabel4.Size = new System.Drawing.Size(0, 18);
-            this.ResultLabel4.TabIndex = 19;
+            this.SelectGaijiInfoFileButton1.Location = new System.Drawing.Point(9, 167);
+            this.SelectGaijiInfoFileButton1.Name = "SelectGaijiInfoFileButton1";
+            this.SelectGaijiInfoFileButton1.Size = new System.Drawing.Size(137, 25);
+            this.SelectGaijiInfoFileButton1.TabIndex = 17;
+            this.SelectGaijiInfoFileButton1.Text = "外字情報ファイル選択";
+            this.SelectGaijiInfoFileButton1.UseVisualStyleBackColor = true;
             // 
             // SubtitleParserForm
             // 
@@ -568,8 +604,11 @@
         private System.Windows.Forms.TextBox FilePathLabeltextBox4;
         private System.Windows.Forms.Button SelectSubtitleFileButton4;
         private System.Windows.Forms.TextBox GaijiInfoFilePathLabeltextBox4;
-        private System.Windows.Forms.Button SelectGaijiInfoFileButton;
+        private System.Windows.Forms.Button SelectGaijiInfoFileButton4;
         private System.Windows.Forms.Button OutputButton4;
         private System.Windows.Forms.Label ResultLabel4;
+        private System.Windows.Forms.TextBox GaijiInfoFilePathLabeltextBox1;
+        private System.Windows.Forms.Button SelectGaijiInfoFileButton1;
+        private System.Windows.Forms.CheckBox ReplaceGaijiCheckBox1;
     }
 }
