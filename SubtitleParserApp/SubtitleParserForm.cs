@@ -13,6 +13,8 @@ namespace SubtitleParserApp {
         private string _additinalText;
         private string _originalFilePath;
         private string _gaijiReplaceInfoCsvPath = $"{AppDomain.CurrentDomain.BaseDirectory}\\gaijiReplaceInfo.csv";
+        // 編集後の未出力状態を管理するフラグ。出力忘れを防ぐために使用する。
+        private bool _hasUnsavedChanges;
 
         public SubtitleParserForm() {
             InitializeComponent();
@@ -57,6 +59,7 @@ namespace SubtitleParserApp {
 
             // カット情報を追加
             _subtitleService.AddCutInfo(startTime, endTime);
+            MarkAsUnsaved();
 
             // 字幕データの修正が完了したことをユーザーに通知
             CutResultTextBox1.AppendText($"{startTime.ToString(@"hh\:mm\:ss\.fff")} ～ {endTime.ToString(@"hh\:mm\:ss\.fff")} のカット完了（カット時間：{(endTime - startTime).ToString(@"hh\:mm\:ss\.fff")}）{Environment.NewLine}");
@@ -142,6 +145,7 @@ namespace SubtitleParserApp {
             // ファイルに書き込む
             File.WriteAllText(outputPath, srtContent);
 
+            ResetUnsavedChanges();
             MessageBox.Show($"Subtitles saved to: {outputPath}");
         }
 
@@ -169,6 +173,7 @@ namespace SubtitleParserApp {
 
             // カット情報を追加
             _subtitleService.AddCutInfo(startTime, endTime);
+            MarkAsUnsaved();
 
             // 字幕データの修正が完了したことをユーザーに通知
             CutResultTextBox2.AppendText($"{startTime.ToString(@"hh\:mm\:ss\.fff")} ～ {endTime.ToString(@"hh\:mm\:ss\.fff")} のカット完了（カット時間：{(endTime - startTime).ToString(@"hh\:mm\:ss\.fff")}）{Environment.NewLine}");
@@ -204,6 +209,7 @@ namespace SubtitleParserApp {
             // ファイルに書き込む
             File.WriteAllText(outputPath, cutInfoSB.ToString());
 
+            ResetUnsavedChanges();
             MessageBox.Show($"Subtitles saved to: {outputPath}");
         }
 
@@ -273,6 +279,7 @@ namespace SubtitleParserApp {
 
             // 調整時間情報を追加
             _subtitleService.AddOffsetInfo(offset, isDelay);
+            MarkAsUnsaved();
 
             // 字幕データの修正が完了したことをユーザーに通知
             EditResultTextBox3.AppendText($"{startTime.ToString(@"hh\:mm\:ss\.fff")} ～ {endTime.ToString(@"hh\:mm\:ss\.fff")} の調整完了（{offset.ToString(@"hh\:mm\:ss\.fff")} {(isDelay ? "遅らせる":"早める")}）{Environment.NewLine}");
@@ -305,6 +312,7 @@ namespace SubtitleParserApp {
             // ファイルに書き込む
             File.WriteAllText(outputPath, srtContent);
 
+            ResetUnsavedChanges();
             MessageBox.Show($"Subtitles saved to: {outputPath}");
         }
 
@@ -372,6 +380,34 @@ namespace SubtitleParserApp {
             File.WriteAllText(outputPath, replaceText);
 
             MessageBox.Show($"Subtitles saved to: {outputPath}");
+        }
+
+        // 編集後に未出力状態であることを記録する。
+        private void MarkAsUnsaved() {
+            _hasUnsavedChanges = true;
+        }
+
+        // 出力完了後など、未出力状態を解消したタイミングで呼び出す。
+        private void ResetUnsavedChanges() {
+            _hasUnsavedChanges = false;
+        }
+
+        // フォームを閉じる際に、未出力の編集が残っていないかを確認する。
+        private void SubtitleParserForm_FormClosing(object sender, FormClosingEventArgs e) {
+            if (!_hasUnsavedChanges) {
+                return;
+            }
+
+            DialogResult result = MessageBox.Show(
+                "編集内容がまだ出力されていません。出力せずに終了すると変更は保存されません。終了してもよろしいですか？",
+                "未出力の編集内容があります",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning,
+                MessageBoxDefaultButton.Button2);
+
+            if (result == DialogResult.No) {
+                e.Cancel = true;
+            }
         }        
     }
 }

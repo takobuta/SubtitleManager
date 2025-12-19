@@ -549,6 +549,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SubtitleParserForm";
             this.Text = "字幕編集";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SubtitleParserForm_FormClosing);
             this.ProcessTabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
