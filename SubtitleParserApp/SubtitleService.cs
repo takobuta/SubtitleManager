@@ -129,7 +129,10 @@ namespace SubtitleParserApp {
 
         public string FormatSubtitlesToSrt(List<Subtitle> subtitles) {
             var sb = new StringBuilder();
-            foreach (var subtitle in subtitles) {
+            for (var index = 0; index < subtitles.Count; index++) {
+                var subtitle = subtitles[index];
+                // リスト順に基づき連番を再採番し、編集後も欠番なく整合したシーケンスを保証する
+                subtitle.SeqNo = index + 1;
                 sb.AppendLine(subtitle.SeqNo.ToString());
                 sb.AppendLine($"{subtitle.StartTime.ToString(@"hh\:mm\:ss\,fff")} --> {subtitle.EndTime.ToString(@"hh\:mm\:ss\,fff")}");
                 sb.AppendLine(subtitle.Text);
