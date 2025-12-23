@@ -29,8 +29,10 @@
             this.TextCountLabel = new System.Windows.Forms.Label();
             this.FilePathLabeltextBox = new System.Windows.Forms.TextBox();
             this.CutButton1 = new System.Windows.Forms.Button();
+            this.CutStartLabel1 = new System.Windows.Forms.Label();
             this.CutStartTimeTextBox1 = new System.Windows.Forms.TextBox();
             this.Namilabel = new System.Windows.Forms.Label();
+            this.CutEndLabel1 = new System.Windows.Forms.Label();
             this.CutEndTimeTextBox1 = new System.Windows.Forms.TextBox();
             this.OutputButton1 = new System.Windows.Forms.Button();
             this.CutResultTextBox1 = new System.Windows.Forms.TextBox();
@@ -38,6 +40,8 @@
             this.ProcessTabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.CutEndLabel2 = new System.Windows.Forms.Label();
+            this.CutStartLabel2 = new System.Windows.Forms.Label();
             this.CutResultTextBox2 = new System.Windows.Forms.TextBox();
             this.OutputButton2 = new System.Windows.Forms.Button();
             this.CutEndTimeTextBox2 = new System.Windows.Forms.TextBox();
@@ -46,8 +50,11 @@
             this.CutStartTimeTextBox2 = new System.Windows.Forms.TextBox();
             this.MovieFilePathLabelTextBox = new System.Windows.Forms.TextBox();
             this.SelectMovieFileButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.AdjustmentDirectionLabel3 = new System.Windows.Forms.Label();
+            this.OffsetLabel3 = new System.Windows.Forms.Label();
+            this.EditEndLabel3 = new System.Windows.Forms.Label();
+            this.EditStartLabel3 = new System.Windows.Forms.Label();
             this.TextCountLabel3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.DelayRadioButton = new System.Windows.Forms.RadioButton();
@@ -142,6 +149,16 @@
             this.CutButton1.UseVisualStyleBackColor = true;
             this.CutButton1.Click += new System.EventHandler(this.CutButton1_Click);
             // 
+            // CutStartLabel1
+            // 
+            this.CutStartLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
+            this.CutStartLabel1.AutoSize = true;
+            this.CutStartLabel1.Location = new System.Drawing.Point(9, 59);
+            this.CutStartLabel1.Name = "CutStartLabel1";
+            this.CutStartLabel1.Size = new System.Drawing.Size(32, 18);
+            this.CutStartLabel1.TabIndex = 19;
+            this.CutStartLabel1.Text = "開始";
+            // 
             // CutStartTimeTextBox1
             // 
             this.CutStartTimeTextBox1.Location = new System.Drawing.Point(9, 80);
@@ -158,6 +175,16 @@
             this.Namilabel.Size = new System.Drawing.Size(20, 18);
             this.Namilabel.TabIndex = 6;
             this.Namilabel.Text = "～";
+            // 
+            // CutEndLabel1
+            // 
+            this.CutEndLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
+            this.CutEndLabel1.AutoSize = true;
+            this.CutEndLabel1.Location = new System.Drawing.Point(165, 59);
+            this.CutEndLabel1.Name = "CutEndLabel1";
+            this.CutEndLabel1.Size = new System.Drawing.Size(32, 18);
+            this.CutEndLabel1.TabIndex = 20;
+            this.CutEndLabel1.Text = "終了";
             // 
             // CutEndTimeTextBox1
             // 
@@ -227,9 +254,11 @@
             this.tabPage1.Controls.Add(this.DeleteSubtitleCheckBox1);
             this.tabPage1.Controls.Add(this.SelectSubtitleFileButton);
             this.tabPage1.Controls.Add(this.TextCountLabel);
+            this.tabPage1.Controls.Add(this.CutEndLabel1);
             this.tabPage1.Controls.Add(this.CutEndTimeTextBox1);
             this.tabPage1.Controls.Add(this.CutButton1);
             this.tabPage1.Controls.Add(this.Namilabel);
+            this.tabPage1.Controls.Add(this.CutStartLabel1);
             this.tabPage1.Controls.Add(this.CutStartTimeTextBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 27);
             this.tabPage1.Name = "tabPage1";
@@ -243,6 +272,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.CutEndLabel2);
+            this.tabPage2.Controls.Add(this.CutStartLabel2);
             this.tabPage2.Controls.Add(this.CutResultTextBox2);
             this.tabPage2.Controls.Add(this.OutputButton2);
             this.tabPage2.Controls.Add(this.CutEndTimeTextBox2);
@@ -251,7 +282,6 @@
             this.tabPage2.Controls.Add(this.CutStartTimeTextBox2);
             this.tabPage2.Controls.Add(this.MovieFilePathLabelTextBox);
             this.tabPage2.Controls.Add(this.SelectMovieFileButton);
-            this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Location = new System.Drawing.Point(4, 27);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -261,6 +291,26 @@
             // 縮小時はスクロールで下部コントロールを表示
             this.tabPage2.AutoScroll = true;
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // CutEndLabel2
+            // 
+            this.CutEndLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
+            this.CutEndLabel2.AutoSize = true;
+            this.CutEndLabel2.Location = new System.Drawing.Point(165, 59);
+            this.CutEndLabel2.Name = "CutEndLabel2";
+            this.CutEndLabel2.Size = new System.Drawing.Size(32, 18);
+            this.CutEndLabel2.TabIndex = 18;
+            this.CutEndLabel2.Text = "終了";
+            // 
+            // CutStartLabel2
+            // 
+            this.CutStartLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
+            this.CutStartLabel2.AutoSize = true;
+            this.CutStartLabel2.Location = new System.Drawing.Point(9, 59);
+            this.CutStartLabel2.Name = "CutStartLabel2";
+            this.CutStartLabel2.Size = new System.Drawing.Size(32, 18);
+            this.CutStartLabel2.TabIndex = 17;
+            this.CutStartLabel2.Text = "開始";
             // 
             // CutResultTextBox2
             // 
@@ -340,16 +390,12 @@
             this.SelectMovieFileButton.UseVisualStyleBackColor = true;
             this.SelectMovieFileButton.Click += new System.EventHandler(this.SelectMovieFileButton_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(159, 45);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 18);
-            this.label1.TabIndex = 5;
-            // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.AdjustmentDirectionLabel3);
+            this.tabPage3.Controls.Add(this.OffsetLabel3);
+            this.tabPage3.Controls.Add(this.EditEndLabel3);
+            this.tabPage3.Controls.Add(this.EditStartLabel3);
             this.tabPage3.Controls.Add(this.TextCountLabel3);
             this.tabPage3.Controls.Add(this.label4);
             this.tabPage3.Controls.Add(this.DelayRadioButton);
@@ -373,6 +419,47 @@
             this.tabPage3.AutoScroll = true;
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // AdjustmentDirectionLabel3
+            // 
+            this.AdjustmentDirectionLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
+            this.AdjustmentDirectionLabel3.AutoSize = true;
+            this.AdjustmentDirectionLabel3.Location = new System.Drawing.Point(142, 120);
+            this.AdjustmentDirectionLabel3.Name = "AdjustmentDirectionLabel3";
+            this.AdjustmentDirectionLabel3.Size = new System.Drawing.Size(68, 18);
+            this.AdjustmentDirectionLabel3.TabIndex = 27;
+            this.AdjustmentDirectionLabel3.Text = "調整方向";
+            // 
+            // OffsetLabel3
+            // 
+            this.OffsetLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
+            this.OffsetLabel3.AutoSize = true;
+            // オフセットと調整方向のラベルは開始・終了欄と重ならないように縦方向へ余白を確保する
+            this.OffsetLabel3.Location = new System.Drawing.Point(9, 120);
+            this.OffsetLabel3.Name = "OffsetLabel3";
+            this.OffsetLabel3.Size = new System.Drawing.Size(65, 18);
+            this.OffsetLabel3.TabIndex = 26;
+            this.OffsetLabel3.Text = "オフセット";
+            // 
+            // EditEndLabel3
+            // 
+            this.EditEndLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
+            this.EditEndLabel3.AutoSize = true;
+            this.EditEndLabel3.Location = new System.Drawing.Point(165, 59);
+            this.EditEndLabel3.Name = "EditEndLabel3";
+            this.EditEndLabel3.Size = new System.Drawing.Size(32, 18);
+            this.EditEndLabel3.TabIndex = 25;
+            this.EditEndLabel3.Text = "終了";
+            // 
+            // EditStartLabel3
+            // 
+            this.EditStartLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
+            this.EditStartLabel3.AutoSize = true;
+            this.EditStartLabel3.Location = new System.Drawing.Point(9, 59);
+            this.EditStartLabel3.Name = "EditStartLabel3";
+            this.EditStartLabel3.Size = new System.Drawing.Size(32, 18);
+            this.EditStartLabel3.TabIndex = 24;
+            this.EditStartLabel3.Text = "開始";
+            // 
             // TextCountLabel3
             // 
             this.TextCountLabel3.AutoSize = true;
@@ -393,7 +480,7 @@
             // DelayRadioButton
             // 
             this.DelayRadioButton.AutoSize = true;
-            this.DelayRadioButton.Location = new System.Drawing.Point(210, 112);
+            this.DelayRadioButton.Location = new System.Drawing.Point(210, 144);
             this.DelayRadioButton.Name = "DelayRadioButton";
             this.DelayRadioButton.Size = new System.Drawing.Size(74, 22);
             this.DelayRadioButton.TabIndex = 21;
@@ -404,7 +491,7 @@
             // 
             this.ForwardRadioButton.AutoSize = true;
             this.ForwardRadioButton.Checked = true;
-            this.ForwardRadioButton.Location = new System.Drawing.Point(142, 112);
+            this.ForwardRadioButton.Location = new System.Drawing.Point(142, 144);
             this.ForwardRadioButton.Name = "ForwardRadioButton";
             this.ForwardRadioButton.Size = new System.Drawing.Size(62, 22);
             this.ForwardRadioButton.TabIndex = 20;
@@ -414,7 +501,7 @@
             // 
             // OffsetTextBox3
             // 
-            this.OffsetTextBox3.Location = new System.Drawing.Point(9, 109);
+            this.OffsetTextBox3.Location = new System.Drawing.Point(9, 141);
             this.OffsetTextBox3.Name = "OffsetTextBox3";
             this.OffsetTextBox3.Size = new System.Drawing.Size(124, 25);
             this.OffsetTextBox3.TabIndex = 19;
@@ -473,7 +560,7 @@
             // 
             // EditButton3
             // 
-            this.EditButton3.Location = new System.Drawing.Point(304, 109);
+            this.EditButton3.Location = new System.Drawing.Point(304, 141);
             // 編集ボタンもリサイズ時に動かないよう左基準で固定
             this.EditButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
             this.EditButton3.Name = "EditButton3";
@@ -648,8 +735,10 @@
         private System.Windows.Forms.Label TextCountLabel;
         private System.Windows.Forms.TextBox FilePathLabeltextBox;
         private System.Windows.Forms.Button CutButton1;
+        private System.Windows.Forms.Label CutStartLabel1;
         private System.Windows.Forms.TextBox CutStartTimeTextBox1;
         private System.Windows.Forms.Label Namilabel;
+        private System.Windows.Forms.Label CutEndLabel1;
         private System.Windows.Forms.TextBox CutEndTimeTextBox1;
         private System.Windows.Forms.Button OutputButton1;
         private System.Windows.Forms.TextBox CutResultTextBox1;
@@ -659,13 +748,14 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TextBox MovieFilePathLabelTextBox;
         private System.Windows.Forms.Button SelectMovieFileButton;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox CutResultTextBox2;
         private System.Windows.Forms.Button OutputButton2;
         private System.Windows.Forms.TextBox CutEndTimeTextBox2;
         private System.Windows.Forms.Button Cutbutton2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox CutStartTimeTextBox2;
+        private System.Windows.Forms.Label CutStartLabel2;
+        private System.Windows.Forms.Label CutEndLabel2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TextBox FilePathLabeltextBox3;
         private System.Windows.Forms.TextBox EditResultTextBox3;
@@ -680,6 +770,10 @@
         private System.Windows.Forms.RadioButton DelayRadioButton;
         private System.Windows.Forms.RadioButton ForwardRadioButton;
         private System.Windows.Forms.Label TextCountLabel3;
+        private System.Windows.Forms.Label EditStartLabel3;
+        private System.Windows.Forms.Label EditEndLabel3;
+        private System.Windows.Forms.Label OffsetLabel3;
+        private System.Windows.Forms.Label AdjustmentDirectionLabel3;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TextBox FilePathLabeltextBox4;
         private System.Windows.Forms.Button SelectSubtitleFileButton4;
