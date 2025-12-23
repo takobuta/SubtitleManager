@@ -423,7 +423,7 @@
             // 
             this.AdjustmentDirectionLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
             this.AdjustmentDirectionLabel3.AutoSize = true;
-            this.AdjustmentDirectionLabel3.Location = new System.Drawing.Point(142, 88);
+            this.AdjustmentDirectionLabel3.Location = new System.Drawing.Point(142, 120);
             this.AdjustmentDirectionLabel3.Name = "AdjustmentDirectionLabel3";
             this.AdjustmentDirectionLabel3.Size = new System.Drawing.Size(68, 18);
             this.AdjustmentDirectionLabel3.TabIndex = 27;
@@ -433,7 +433,8 @@
             // 
             this.OffsetLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
             this.OffsetLabel3.AutoSize = true;
-            this.OffsetLabel3.Location = new System.Drawing.Point(9, 88);
+            // オフセットと調整方向のラベルは開始・終了欄と重ならないように縦方向へ余白を確保する
+            this.OffsetLabel3.Location = new System.Drawing.Point(9, 120);
             this.OffsetLabel3.Name = "OffsetLabel3";
             this.OffsetLabel3.Size = new System.Drawing.Size(65, 18);
             this.OffsetLabel3.TabIndex = 26;
@@ -479,7 +480,7 @@
             // DelayRadioButton
             // 
             this.DelayRadioButton.AutoSize = true;
-            this.DelayRadioButton.Location = new System.Drawing.Point(210, 112);
+            this.DelayRadioButton.Location = new System.Drawing.Point(210, 144);
             this.DelayRadioButton.Name = "DelayRadioButton";
             this.DelayRadioButton.Size = new System.Drawing.Size(74, 22);
             this.DelayRadioButton.TabIndex = 21;
@@ -490,7 +491,7 @@
             // 
             this.ForwardRadioButton.AutoSize = true;
             this.ForwardRadioButton.Checked = true;
-            this.ForwardRadioButton.Location = new System.Drawing.Point(142, 112);
+            this.ForwardRadioButton.Location = new System.Drawing.Point(142, 144);
             this.ForwardRadioButton.Name = "ForwardRadioButton";
             this.ForwardRadioButton.Size = new System.Drawing.Size(62, 22);
             this.ForwardRadioButton.TabIndex = 20;
@@ -500,7 +501,7 @@
             // 
             // OffsetTextBox3
             // 
-            this.OffsetTextBox3.Location = new System.Drawing.Point(9, 109);
+            this.OffsetTextBox3.Location = new System.Drawing.Point(9, 141);
             this.OffsetTextBox3.Name = "OffsetTextBox3";
             this.OffsetTextBox3.Size = new System.Drawing.Size(124, 25);
             this.OffsetTextBox3.TabIndex = 19;
@@ -559,7 +560,7 @@
             // 
             // EditButton3
             // 
-            this.EditButton3.Location = new System.Drawing.Point(304, 109);
+            this.EditButton3.Location = new System.Drawing.Point(304, 141);
             // 編集ボタンもリサイズ時に動かないよう左基準で固定
             this.EditButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
             this.EditButton3.Name = "EditButton3";
