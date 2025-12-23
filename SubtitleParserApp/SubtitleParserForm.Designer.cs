@@ -133,7 +133,8 @@
             // CutButton1
             // 
             this.CutButton1.Location = new System.Drawing.Point(304, 80);
-            this.CutButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            // カットボタンはリサイズで位置が動かないよう左基準で固定
+            this.CutButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
             this.CutButton1.Name = "CutButton1";
             this.CutButton1.Size = new System.Drawing.Size(137, 25);
             this.CutButton1.TabIndex = 4;
@@ -168,8 +169,8 @@
             // OutputButton1
             // 
             this.OutputButton1.Location = new System.Drawing.Point(9, 363);
-            // 出力ボタンも左基準の固定位置で重なりを回避
-            this.OutputButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
+            // 出力ボタンは下端基準で固定し、縦リサイズ時に結果欄と重ならないようにする
+            this.OutputButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.OutputButton1.Name = "OutputButton1";
             this.OutputButton1.Size = new System.Drawing.Size(137, 25);
             this.OutputButton1.TabIndex = 8;
@@ -272,7 +273,7 @@
             // OutputButton2
             // 
             this.OutputButton2.Location = new System.Drawing.Point(8, 297);
-            this.OutputButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
+            this.OutputButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.OutputButton2.Name = "OutputButton2";
             this.OutputButton2.Size = new System.Drawing.Size(137, 25);
             this.OutputButton2.TabIndex = 15;
@@ -290,7 +291,7 @@
             // Cutbutton2
             // 
             this.Cutbutton2.Location = new System.Drawing.Point(304, 80);
-            this.Cutbutton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Cutbutton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
             this.Cutbutton2.Name = "Cutbutton2";
             this.Cutbutton2.Size = new System.Drawing.Size(137, 25);
             this.Cutbutton2.TabIndex = 11;
@@ -438,7 +439,7 @@
             // OutputButton3
             // 
             this.OutputButton3.Location = new System.Drawing.Point(8, 297);
-            this.OutputButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
+            this.OutputButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.OutputButton3.Name = "OutputButton3";
             this.OutputButton3.Size = new System.Drawing.Size(137, 25);
             this.OutputButton3.TabIndex = 17;
@@ -467,7 +468,8 @@
             // EditButton3
             // 
             this.EditButton3.Location = new System.Drawing.Point(304, 109);
-            this.EditButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            // 編集ボタンもリサイズ時に動かないよう左基準で固定
+            this.EditButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
             this.EditButton3.Name = "EditButton3";
             this.EditButton3.Size = new System.Drawing.Size(137, 25);
             this.EditButton3.TabIndex = 13;
@@ -519,7 +521,7 @@
             // OutputButton4
             // 
             this.OutputButton4.Location = new System.Drawing.Point(9, 143);
-            this.OutputButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
+            this.OutputButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.OutputButton4.Name = "OutputButton4";
             this.OutputButton4.Size = new System.Drawing.Size(137, 25);
             this.OutputButton4.TabIndex = 18;
