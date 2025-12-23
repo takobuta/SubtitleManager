@@ -23,6 +23,8 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            this.UnsavedChangesPanel = new System.Windows.Forms.Panel();
+            this.UnsavedChangesLabel = new System.Windows.Forms.Label();
             this.SelectSubtitleFileButton = new System.Windows.Forms.Button();
             this.TextCountLabel = new System.Windows.Forms.Label();
             this.FilePathLabeltextBox = new System.Windows.Forms.TextBox();
@@ -69,12 +71,33 @@
             this.ReplaceGaijiCheckBox1 = new System.Windows.Forms.CheckBox();
             this.GaijiInfoFilePathLabeltextBox1 = new System.Windows.Forms.TextBox();
             this.SelectGaijiInfoFileButton1 = new System.Windows.Forms.Button();
+            this.UnsavedChangesPanel.SuspendLayout();
             this.ProcessTabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // UnsavedChangesPanel
+            // 
+            this.UnsavedChangesPanel.BackColor = System.Drawing.Color.LightYellow;
+            this.UnsavedChangesPanel.Controls.Add(this.UnsavedChangesLabel);
+            this.UnsavedChangesPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.UnsavedChangesPanel.Location = new System.Drawing.Point(0, 0);
+            this.UnsavedChangesPanel.Name = "UnsavedChangesPanel";
+            this.UnsavedChangesPanel.Size = new System.Drawing.Size(602, 44);
+            this.UnsavedChangesPanel.TabIndex = 12;
+            this.UnsavedChangesPanel.Visible = false;
+            // 
+            // UnsavedChangesLabel
+            // 
+            this.UnsavedChangesLabel.AutoSize = true;
+            this.UnsavedChangesLabel.Location = new System.Drawing.Point(12, 12);
+            this.UnsavedChangesLabel.Name = "UnsavedChangesLabel";
+            this.UnsavedChangesLabel.Size = new System.Drawing.Size(188, 18);
+            this.UnsavedChangesLabel.TabIndex = 0;
+            this.UnsavedChangesLabel.Text = "未出力の編集内容があります";
             // 
             // SelectSubtitleFileButton
             // 
@@ -173,10 +196,11 @@
             this.ProcessTabControl.Controls.Add(this.tabPage2);
             this.ProcessTabControl.Controls.Add(this.tabPage3);
             this.ProcessTabControl.Controls.Add(this.tabPage4);
+            this.ProcessTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ProcessTabControl.Location = new System.Drawing.Point(0, 0);
             this.ProcessTabControl.Name = "ProcessTabControl";
             this.ProcessTabControl.SelectedIndex = 0;
-            this.ProcessTabControl.Size = new System.Drawing.Size(605, 574);
+            this.ProcessTabControl.Size = new System.Drawing.Size(605, 528);
             this.ProcessTabControl.TabIndex = 11;
             // 
             // tabPage1
@@ -197,7 +221,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 27);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(597, 543);
+            this.tabPage1.Size = new System.Drawing.Size(597, 497);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "①カット（字幕編集）";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -216,7 +240,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 27);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(597, 543);
+            this.tabPage2.Size = new System.Drawing.Size(597, 497);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "②カットのみ";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -317,7 +341,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 27);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(597, 543);
+            this.tabPage3.Size = new System.Drawing.Size(597, 497);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "③字幕調整";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -451,7 +475,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 27);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(597, 543);
+            this.tabPage4.Size = new System.Drawing.Size(597, 497);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "④外字置換";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -545,11 +569,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(602, 572);
             this.Controls.Add(this.ProcessTabControl);
+            this.Controls.Add(this.UnsavedChangesPanel);
             this.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SubtitleParserForm";
             this.Text = "字幕編集";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SubtitleParserForm_FormClosing);
+            this.UnsavedChangesPanel.ResumeLayout(false);
+            this.UnsavedChangesPanel.PerformLayout();
             this.ProcessTabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -565,6 +592,8 @@
 
         #endregion
 
+        private System.Windows.Forms.Panel UnsavedChangesPanel;
+        private System.Windows.Forms.Label UnsavedChangesLabel;
         private System.Windows.Forms.Button SelectSubtitleFileButton;
         private System.Windows.Forms.Label TextCountLabel;
         private System.Windows.Forms.TextBox FilePathLabeltextBox;
