@@ -616,6 +616,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(602, 572);
+            // 初期表示サイズを最小サイズとして固定し、これ以上小さくならないよう制約
+            this.MinimumSize = new System.Drawing.Size(618, 611);
             this.Controls.Add(this.ProcessTabControl);
             this.Controls.Add(this.UnsavedChangesPanel);
             this.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
