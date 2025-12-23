@@ -196,7 +196,8 @@
             this.ProcessTabControl.Controls.Add(this.tabPage2);
             this.ProcessTabControl.Controls.Add(this.tabPage3);
             this.ProcessTabControl.Controls.Add(this.tabPage4);
-            this.ProcessTabControl.Location = new System.Drawing.Point(0, 44);
+            this.ProcessTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ProcessTabControl.Location = new System.Drawing.Point(0, 0);
             this.ProcessTabControl.Name = "ProcessTabControl";
             this.ProcessTabControl.SelectedIndex = 0;
             this.ProcessTabControl.Size = new System.Drawing.Size(605, 528);
@@ -567,8 +568,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(602, 572);
-            this.Controls.Add(this.UnsavedChangesPanel);
             this.Controls.Add(this.ProcessTabControl);
+            this.Controls.Add(this.UnsavedChangesPanel);
             this.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SubtitleParserForm";
