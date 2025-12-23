@@ -102,7 +102,8 @@
             // SelectSubtitleFileButton
             // 
             this.SelectSubtitleFileButton.Location = new System.Drawing.Point(9, 17);
-            this.SelectSubtitleFileButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            // 右アンカーによる水平移動で入力欄に重ならないよう、左固定のアンカーに変更
+            this.SelectSubtitleFileButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
             this.SelectSubtitleFileButton.Name = "SelectSubtitleFileButton";
             this.SelectSubtitleFileButton.Size = new System.Drawing.Size(137, 25);
             this.SelectSubtitleFileButton.TabIndex = 0;
@@ -167,7 +168,8 @@
             // OutputButton1
             // 
             this.OutputButton1.Location = new System.Drawing.Point(9, 363);
-            this.OutputButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            // 出力ボタンも左基準の固定位置で重なりを回避
+            this.OutputButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
             this.OutputButton1.Name = "OutputButton1";
             this.OutputButton1.Size = new System.Drawing.Size(137, 25);
             this.OutputButton1.TabIndex = 8;
@@ -270,7 +272,7 @@
             // OutputButton2
             // 
             this.OutputButton2.Location = new System.Drawing.Point(8, 297);
-            this.OutputButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.OutputButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
             this.OutputButton2.Name = "OutputButton2";
             this.OutputButton2.Size = new System.Drawing.Size(137, 25);
             this.OutputButton2.TabIndex = 15;
@@ -325,7 +327,7 @@
             // SelectMovieFileButton
             // 
             this.SelectMovieFileButton.Location = new System.Drawing.Point(9, 17);
-            this.SelectMovieFileButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SelectMovieFileButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
             this.SelectMovieFileButton.Name = "SelectMovieFileButton";
             this.SelectMovieFileButton.Size = new System.Drawing.Size(137, 25);
             this.SelectMovieFileButton.TabIndex = 4;
@@ -436,7 +438,7 @@
             // OutputButton3
             // 
             this.OutputButton3.Location = new System.Drawing.Point(8, 297);
-            this.OutputButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.OutputButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
             this.OutputButton3.Name = "OutputButton3";
             this.OutputButton3.Size = new System.Drawing.Size(137, 25);
             this.OutputButton3.TabIndex = 17;
@@ -447,7 +449,7 @@
             // SelectSubtitleFileButton3
             // 
             this.SelectSubtitleFileButton3.Location = new System.Drawing.Point(9, 17);
-            this.SelectSubtitleFileButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SelectSubtitleFileButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
             this.SelectSubtitleFileButton3.Name = "SelectSubtitleFileButton3";
             this.SelectSubtitleFileButton3.Size = new System.Drawing.Size(137, 25);
             this.SelectSubtitleFileButton3.TabIndex = 11;
@@ -517,7 +519,7 @@
             // OutputButton4
             // 
             this.OutputButton4.Location = new System.Drawing.Point(9, 143);
-            this.OutputButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.OutputButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
             this.OutputButton4.Name = "OutputButton4";
             this.OutputButton4.Size = new System.Drawing.Size(137, 25);
             this.OutputButton4.TabIndex = 18;
@@ -538,7 +540,7 @@
             // SelectGaijiInfoFileButton4
             // 
             this.SelectGaijiInfoFileButton4.Location = new System.Drawing.Point(9, 79);
-            this.SelectGaijiInfoFileButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SelectGaijiInfoFileButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
             this.SelectGaijiInfoFileButton4.Name = "SelectGaijiInfoFileButton4";
             this.SelectGaijiInfoFileButton4.Size = new System.Drawing.Size(137, 25);
             this.SelectGaijiInfoFileButton4.TabIndex = 15;
@@ -558,7 +560,7 @@
             // SelectSubtitleFileButton4
             // 
             this.SelectSubtitleFileButton4.Location = new System.Drawing.Point(9, 17);
-            this.SelectSubtitleFileButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SelectSubtitleFileButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
             this.SelectSubtitleFileButton4.Name = "SelectSubtitleFileButton4";
             this.SelectSubtitleFileButton4.Size = new System.Drawing.Size(137, 25);
             this.SelectSubtitleFileButton4.TabIndex = 13;
@@ -592,7 +594,7 @@
             // SelectGaijiInfoFileButton1
             // 
             this.SelectGaijiInfoFileButton1.Location = new System.Drawing.Point(9, 167);
-            this.SelectGaijiInfoFileButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SelectGaijiInfoFileButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
             this.SelectGaijiInfoFileButton1.Name = "SelectGaijiInfoFileButton1";
             this.SelectGaijiInfoFileButton1.Size = new System.Drawing.Size(137, 25);
             this.SelectGaijiInfoFileButton1.TabIndex = 17;
