@@ -102,6 +102,8 @@
             // SelectSubtitleFileButton
             // 
             this.SelectSubtitleFileButton.Location = new System.Drawing.Point(9, 17);
+            // 右アンカーによる水平移動で入力欄に重ならないよう、左固定のアンカーに変更
+            this.SelectSubtitleFileButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
             this.SelectSubtitleFileButton.Name = "SelectSubtitleFileButton";
             this.SelectSubtitleFileButton.Size = new System.Drawing.Size(137, 25);
             this.SelectSubtitleFileButton.TabIndex = 0;
@@ -120,6 +122,9 @@
             // FilePathLabeltextBox
             // 
             this.FilePathLabeltextBox.Location = new System.Drawing.Point(152, 17);
+            // リサイズ時に左右へ自然に広がるようアンカーを設定
+            this.FilePathLabeltextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.FilePathLabeltextBox.Name = "FilePathLabeltextBox";
             this.FilePathLabeltextBox.ReadOnly = true;
             this.FilePathLabeltextBox.Size = new System.Drawing.Size(423, 25);
@@ -128,6 +133,8 @@
             // CutButton1
             // 
             this.CutButton1.Location = new System.Drawing.Point(304, 80);
+            // カットボタンはリサイズで位置が動かないよう左基準で固定
+            this.CutButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
             this.CutButton1.Name = "CutButton1";
             this.CutButton1.Size = new System.Drawing.Size(137, 25);
             this.CutButton1.TabIndex = 4;
@@ -162,6 +169,8 @@
             // OutputButton1
             // 
             this.OutputButton1.Location = new System.Drawing.Point(9, 363);
+            // 出力ボタンは下端基準で固定し、縦リサイズ時に結果欄と重ならないようにする
+            this.OutputButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.OutputButton1.Name = "OutputButton1";
             this.OutputButton1.Size = new System.Drawing.Size(137, 25);
             this.OutputButton1.TabIndex = 8;
@@ -172,6 +181,10 @@
             // CutResultTextBox1
             // 
             this.CutResultTextBox1.Location = new System.Drawing.Point(9, 220);
+            // クリップボックスがフォームサイズに追従するよう四辺にアンカーを設定
+            this.CutResultTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.CutResultTextBox1.Multiline = true;
             this.CutResultTextBox1.Name = "CutResultTextBox1";
             this.CutResultTextBox1.ReadOnly = true;
@@ -224,6 +237,8 @@
             this.tabPage1.Size = new System.Drawing.Size(597, 497);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "①カット（字幕編集）";
+            // 縮小時もレイアウトを崩さずスクロールで操作できるようにする
+            this.tabPage1.AutoScroll = true;
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage2
@@ -243,11 +258,16 @@
             this.tabPage2.Size = new System.Drawing.Size(597, 497);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "②カットのみ";
+            // 縮小時はスクロールで下部コントロールを表示
+            this.tabPage2.AutoScroll = true;
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // CutResultTextBox2
             // 
             this.CutResultTextBox2.Location = new System.Drawing.Point(9, 140);
+            this.CutResultTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.CutResultTextBox2.Multiline = true;
             this.CutResultTextBox2.Name = "CutResultTextBox2";
             this.CutResultTextBox2.ReadOnly = true;
@@ -257,6 +277,7 @@
             // OutputButton2
             // 
             this.OutputButton2.Location = new System.Drawing.Point(8, 297);
+            this.OutputButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.OutputButton2.Name = "OutputButton2";
             this.OutputButton2.Size = new System.Drawing.Size(137, 25);
             this.OutputButton2.TabIndex = 15;
@@ -274,6 +295,7 @@
             // Cutbutton2
             // 
             this.Cutbutton2.Location = new System.Drawing.Point(304, 80);
+            this.Cutbutton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
             this.Cutbutton2.Name = "Cutbutton2";
             this.Cutbutton2.Size = new System.Drawing.Size(137, 25);
             this.Cutbutton2.TabIndex = 11;
@@ -300,6 +322,8 @@
             // MovieFilePathLabelTextBox
             // 
             this.MovieFilePathLabelTextBox.Location = new System.Drawing.Point(152, 17);
+            this.MovieFilePathLabelTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.MovieFilePathLabelTextBox.Name = "MovieFilePathLabelTextBox";
             this.MovieFilePathLabelTextBox.ReadOnly = true;
             this.MovieFilePathLabelTextBox.Size = new System.Drawing.Size(423, 25);
@@ -308,6 +332,7 @@
             // SelectMovieFileButton
             // 
             this.SelectMovieFileButton.Location = new System.Drawing.Point(9, 17);
+            this.SelectMovieFileButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
             this.SelectMovieFileButton.Name = "SelectMovieFileButton";
             this.SelectMovieFileButton.Size = new System.Drawing.Size(137, 25);
             this.SelectMovieFileButton.TabIndex = 4;
@@ -344,6 +369,8 @@
             this.tabPage3.Size = new System.Drawing.Size(597, 497);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "③字幕調整";
+            // 縮小時にスクロール可能にしてボタンの上方移動を防止
+            this.tabPage3.AutoScroll = true;
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // TextCountLabel3
@@ -396,6 +423,8 @@
             // FilePathLabeltextBox3
             // 
             this.FilePathLabeltextBox3.Location = new System.Drawing.Point(152, 17);
+            this.FilePathLabeltextBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.FilePathLabeltextBox3.Name = "FilePathLabeltextBox3";
             this.FilePathLabeltextBox3.ReadOnly = true;
             this.FilePathLabeltextBox3.Size = new System.Drawing.Size(423, 25);
@@ -404,6 +433,9 @@
             // EditResultTextBox3
             // 
             this.EditResultTextBox3.Location = new System.Drawing.Point(9, 140);
+            this.EditResultTextBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.EditResultTextBox3.Multiline = true;
             this.EditResultTextBox3.Name = "EditResultTextBox3";
             this.EditResultTextBox3.ReadOnly = true;
@@ -413,6 +445,7 @@
             // OutputButton3
             // 
             this.OutputButton3.Location = new System.Drawing.Point(8, 297);
+            this.OutputButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.OutputButton3.Name = "OutputButton3";
             this.OutputButton3.Size = new System.Drawing.Size(137, 25);
             this.OutputButton3.TabIndex = 17;
@@ -423,6 +456,7 @@
             // SelectSubtitleFileButton3
             // 
             this.SelectSubtitleFileButton3.Location = new System.Drawing.Point(9, 17);
+            this.SelectSubtitleFileButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
             this.SelectSubtitleFileButton3.Name = "SelectSubtitleFileButton3";
             this.SelectSubtitleFileButton3.Size = new System.Drawing.Size(137, 25);
             this.SelectSubtitleFileButton3.TabIndex = 11;
@@ -440,6 +474,8 @@
             // EditButton3
             // 
             this.EditButton3.Location = new System.Drawing.Point(304, 109);
+            // 編集ボタンもリサイズ時に動かないよう左基準で固定
+            this.EditButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
             this.EditButton3.Name = "EditButton3";
             this.EditButton3.Size = new System.Drawing.Size(137, 25);
             this.EditButton3.TabIndex = 13;
@@ -478,6 +514,8 @@
             this.tabPage4.Size = new System.Drawing.Size(597, 497);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "④外字置換";
+            // フォーム縮小時に重なりを避けるためスクロールを有効化
+            this.tabPage4.AutoScroll = true;
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // ResultLabel4
@@ -491,6 +529,7 @@
             // OutputButton4
             // 
             this.OutputButton4.Location = new System.Drawing.Point(9, 143);
+            this.OutputButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.OutputButton4.Name = "OutputButton4";
             this.OutputButton4.Size = new System.Drawing.Size(137, 25);
             this.OutputButton4.TabIndex = 18;
@@ -501,6 +540,8 @@
             // GaijiInfoFilePathLabeltextBox4
             // 
             this.GaijiInfoFilePathLabeltextBox4.Location = new System.Drawing.Point(152, 79);
+            this.GaijiInfoFilePathLabeltextBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GaijiInfoFilePathLabeltextBox4.Name = "GaijiInfoFilePathLabeltextBox4";
             this.GaijiInfoFilePathLabeltextBox4.ReadOnly = true;
             this.GaijiInfoFilePathLabeltextBox4.Size = new System.Drawing.Size(423, 25);
@@ -509,6 +550,7 @@
             // SelectGaijiInfoFileButton4
             // 
             this.SelectGaijiInfoFileButton4.Location = new System.Drawing.Point(9, 79);
+            this.SelectGaijiInfoFileButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
             this.SelectGaijiInfoFileButton4.Name = "SelectGaijiInfoFileButton4";
             this.SelectGaijiInfoFileButton4.Size = new System.Drawing.Size(137, 25);
             this.SelectGaijiInfoFileButton4.TabIndex = 15;
@@ -518,6 +560,8 @@
             // FilePathLabeltextBox4
             // 
             this.FilePathLabeltextBox4.Location = new System.Drawing.Point(152, 17);
+            this.FilePathLabeltextBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.FilePathLabeltextBox4.Name = "FilePathLabeltextBox4";
             this.FilePathLabeltextBox4.ReadOnly = true;
             this.FilePathLabeltextBox4.Size = new System.Drawing.Size(423, 25);
@@ -526,6 +570,7 @@
             // SelectSubtitleFileButton4
             // 
             this.SelectSubtitleFileButton4.Location = new System.Drawing.Point(9, 17);
+            this.SelectSubtitleFileButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
             this.SelectSubtitleFileButton4.Name = "SelectSubtitleFileButton4";
             this.SelectSubtitleFileButton4.Size = new System.Drawing.Size(137, 25);
             this.SelectSubtitleFileButton4.TabIndex = 13;
@@ -549,6 +594,8 @@
             // GaijiInfoFilePathLabeltextBox1
             // 
             this.GaijiInfoFilePathLabeltextBox1.Location = new System.Drawing.Point(152, 167);
+            this.GaijiInfoFilePathLabeltextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GaijiInfoFilePathLabeltextBox1.Name = "GaijiInfoFilePathLabeltextBox1";
             this.GaijiInfoFilePathLabeltextBox1.ReadOnly = true;
             this.GaijiInfoFilePathLabeltextBox1.Size = new System.Drawing.Size(423, 25);
@@ -557,6 +604,7 @@
             // SelectGaijiInfoFileButton1
             // 
             this.SelectGaijiInfoFileButton1.Location = new System.Drawing.Point(9, 167);
+            this.SelectGaijiInfoFileButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
             this.SelectGaijiInfoFileButton1.Name = "SelectGaijiInfoFileButton1";
             this.SelectGaijiInfoFileButton1.Size = new System.Drawing.Size(137, 25);
             this.SelectGaijiInfoFileButton1.TabIndex = 17;
@@ -568,6 +616,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(602, 572);
+            // 初期表示サイズを最小サイズとして固定し、これ以上小さくならないよう制約
+            this.MinimumSize = new System.Drawing.Size(618, 611);
             this.Controls.Add(this.ProcessTabControl);
             this.Controls.Add(this.UnsavedChangesPanel);
             this.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
