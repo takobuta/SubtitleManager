@@ -20,6 +20,7 @@ namespace SubtitleParserApp {
             InitializeComponent();
             GaijiInfoFilePathLabeltextBox1.Text = _gaijiReplaceInfoCsvPath;
             GaijiInfoFilePathLabeltextBox4.Text = _gaijiReplaceInfoCsvPath;
+            UpdateUnsavedChangesBanner();
         }
 
         private void SelectSubtitleFileButton_Click(object sender, EventArgs e) {
@@ -34,6 +35,7 @@ namespace SubtitleParserApp {
                 try {
                     (_subtitles, _additinalText) = _subtitleService.ReadSubtitlesFromFile(_originalFilePath);
                     TextCountLabel.Text = $"{_subtitles.Count}件の字幕テキストを読み込みました！";
+                    ResetUnsavedChanges();
                 } catch (IOException ioEx) {
                     MessageBox.Show($"ファイル読み込みエラー: {ioEx.Message}");
                     throw;
@@ -243,6 +245,7 @@ namespace SubtitleParserApp {
                 try {
                     (_subtitles, _additinalText) = _subtitleService.ReadSubtitlesFromFile(_originalFilePath);
                     TextCountLabel3.Text = $"{_subtitles.Count}件の字幕テキストを読み込みました！";
+                    ResetUnsavedChanges();
                 } catch (IOException ioEx) {
                     MessageBox.Show($"ファイル読み込みエラー: {ioEx.Message}");
                     throw;
@@ -327,6 +330,7 @@ namespace SubtitleParserApp {
                 FilePathLabeltextBox4.Text = _originalFilePath;
                 try {
                     (_subtitles, _additinalText) = _subtitleService.ReadSubtitlesFromFile(_originalFilePath);
+                    ResetUnsavedChanges();
                 } catch (IOException ioEx) {
                     MessageBox.Show($"ファイル読み込みエラー: {ioEx.Message}");
                     throw;
@@ -385,11 +389,18 @@ namespace SubtitleParserApp {
         // 編集後に未出力状態であることを記録する。
         private void MarkAsUnsaved() {
             _hasUnsavedChanges = true;
+            UpdateUnsavedChangesBanner();
         }
 
         // 出力完了後など、未出力状態を解消したタイミングで呼び出す。
         private void ResetUnsavedChanges() {
             _hasUnsavedChanges = false;
+            UpdateUnsavedChangesBanner();
+        }
+
+        // 未出力状態をユーザーに明示するための視覚的フィードバックとしてバナーの表示を更新する。
+        private void UpdateUnsavedChangesBanner() {
+            UnsavedChangesPanel.Visible = _hasUnsavedChanges;
         }
 
         // フォームを閉じる際に、未出力の編集が残っていないかを確認する。
