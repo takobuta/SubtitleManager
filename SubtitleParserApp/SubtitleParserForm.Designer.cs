@@ -237,6 +237,8 @@
             this.tabPage1.Size = new System.Drawing.Size(597, 497);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "①カット（字幕編集）";
+            // 縮小時もレイアウトを崩さずスクロールで操作できるようにする
+            this.tabPage1.AutoScroll = true;
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage2
@@ -256,6 +258,8 @@
             this.tabPage2.Size = new System.Drawing.Size(597, 497);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "②カットのみ";
+            // 縮小時はスクロールで下部コントロールを表示
+            this.tabPage2.AutoScroll = true;
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // CutResultTextBox2
@@ -365,6 +369,8 @@
             this.tabPage3.Size = new System.Drawing.Size(597, 497);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "③字幕調整";
+            // 縮小時にスクロール可能にしてボタンの上方移動を防止
+            this.tabPage3.AutoScroll = true;
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // TextCountLabel3
@@ -508,6 +514,8 @@
             this.tabPage4.Size = new System.Drawing.Size(597, 497);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "④外字置換";
+            // フォーム縮小時に重なりを避けるためスクロールを有効化
+            this.tabPage4.AutoScroll = true;
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // ResultLabel4
