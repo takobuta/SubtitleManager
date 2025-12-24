@@ -571,6 +571,27 @@
             this.SelectSubtitleFileButton3.UseVisualStyleBackColor = true;
             this.SelectSubtitleFileButton3.Click += new System.EventHandler(this.SelectSubtitleFileButton3_Click);
             // 
+            // FilePathLabeltextBox3
+            // 
+            this.FilePathLabeltextBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FilePathLabeltextBox3.Location = new System.Drawing.Point(164, 16);
+            this.FilePathLabeltextBox3.Margin = new System.Windows.Forms.Padding(6);
+            this.FilePathLabeltextBox3.Name = "FilePathLabeltextBox3";
+            this.FilePathLabeltextBox3.ReadOnly = true;
+            this.FilePathLabeltextBox3.Size = new System.Drawing.Size(421, 25);
+            this.FilePathLabeltextBox3.TabIndex = 12;
+            // 
+            // EditStartLabel3
+            // 
+            this.EditStartLabel3.AutoSize = true;
+            this.EditStartLabel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EditStartLabel3.Location = new System.Drawing.Point(16, 60);
+            this.EditStartLabel3.Margin = new System.Windows.Forms.Padding(6);
+            this.EditStartLabel3.Name = "EditStartLabel3";
+            this.EditStartLabel3.Size = new System.Drawing.Size(134, 18);
+            this.EditStartLabel3.TabIndex = 24;
+            this.EditStartLabel3.Text = "開始";
+            // 
             // EditEndTimeTextBox3
             // 
             this.EditEndTimeTextBox3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -579,6 +600,76 @@
             this.EditEndTimeTextBox3.Name = "EditEndTimeTextBox3";
             this.EditEndTimeTextBox3.Size = new System.Drawing.Size(134, 25);
             this.EditEndTimeTextBox3.TabIndex = 16;
+            // 
+            // EditEndLabel3
+            // 
+            this.EditEndLabel3.AutoSize = true;
+            this.EditEndLabel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EditEndLabel3.Location = new System.Drawing.Point(16, 99);
+            this.EditEndLabel3.Margin = new System.Windows.Forms.Padding(6);
+            this.EditEndLabel3.Name = "EditEndLabel3";
+            this.EditEndLabel3.Size = new System.Drawing.Size(134, 18);
+            this.EditEndLabel3.TabIndex = 25;
+            this.EditEndLabel3.Text = "終了";
+            // 
+            // AdjustmentDirectionLabel3
+            // 
+            this.AdjustmentDirectionLabel3.AutoSize = true;
+            this.AdjustmentDirectionLabel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AdjustmentDirectionLabel3.Location = new System.Drawing.Point(306, 99);
+            this.AdjustmentDirectionLabel3.Margin = new System.Windows.Forms.Padding(6);
+            this.AdjustmentDirectionLabel3.Name = "AdjustmentDirectionLabel3";
+            this.AdjustmentDirectionLabel3.Size = new System.Drawing.Size(134, 18);
+            this.AdjustmentDirectionLabel3.TabIndex = 27;
+            this.AdjustmentDirectionLabel3.Text = "調整方向";
+            // 
+            // OffsetLabel3
+            // 
+            this.OffsetLabel3.AutoSize = true;
+            // オフセット入力を分かりやすくするための見出しラベル
+            this.OffsetLabel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.OffsetLabel3.Location = new System.Drawing.Point(16, 138);
+            this.OffsetLabel3.Margin = new System.Windows.Forms.Padding(6);
+            this.OffsetLabel3.Name = "OffsetLabel3";
+            this.OffsetLabel3.Size = new System.Drawing.Size(134, 18);
+            this.OffsetLabel3.TabIndex = 26;
+            this.OffsetLabel3.Text = "オフセット";
+            // 
+            // OffsetTextBox3
+            // 
+            this.OffsetTextBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.OffsetTextBox3.Location = new System.Drawing.Point(164, 138);
+            this.OffsetTextBox3.Margin = new System.Windows.Forms.Padding(6);
+            this.OffsetTextBox3.Name = "OffsetTextBox3";
+            this.OffsetTextBox3.Size = new System.Drawing.Size(134, 25);
+            this.OffsetTextBox3.TabIndex = 19;
+            this.OffsetTextBox3.Text = "00:00:00.000";
+            // 
+            // ForwardRadioButton
+            // 
+            this.ForwardRadioButton.AutoSize = true;
+            this.ForwardRadioButton.Checked = true;
+            this.ForwardRadioButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ForwardRadioButton.Location = new System.Drawing.Point(306, 138);
+            this.ForwardRadioButton.Margin = new System.Windows.Forms.Padding(6);
+            this.ForwardRadioButton.Name = "ForwardRadioButton";
+            this.ForwardRadioButton.Size = new System.Drawing.Size(134, 33);
+            this.ForwardRadioButton.TabIndex = 20;
+            this.ForwardRadioButton.TabStop = true;
+            this.ForwardRadioButton.Text = "早める";
+            this.ForwardRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // DelayRadioButton
+            // 
+            this.DelayRadioButton.AutoSize = true;
+            this.DelayRadioButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DelayRadioButton.Location = new System.Drawing.Point(456, 138);
+            this.DelayRadioButton.Margin = new System.Windows.Forms.Padding(6);
+            this.DelayRadioButton.Name = "DelayRadioButton";
+            this.DelayRadioButton.Size = new System.Drawing.Size(129, 33);
+            this.DelayRadioButton.TabIndex = 21;
+            this.DelayRadioButton.Text = "遅らせる";
+            this.DelayRadioButton.UseVisualStyleBackColor = true;
             // 
             // EditButton3
             // 
@@ -593,6 +684,27 @@
             this.EditButton3.Text = "編集";
             this.EditButton3.UseVisualStyleBackColor = true;
             this.EditButton3.Click += new System.EventHandler(this.EditButton3_Click);
+            // 
+            // TextCountLabel3
+            // 
+            this.TextCountLabel3.AutoSize = true;
+            this.TextCountLabel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TextCountLabel3.Location = new System.Drawing.Point(164, 177);
+            this.TextCountLabel3.Margin = new System.Windows.Forms.Padding(6);
+            this.TextCountLabel3.Name = "TextCountLabel3";
+            this.TextCountLabel3.Size = new System.Drawing.Size(276, 18);
+            this.TextCountLabel3.TabIndex = 23;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Location = new System.Drawing.Point(164, 213);
+            this.label4.Margin = new System.Windows.Forms.Padding(6);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(276, 18);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "※ 終了を指定しない場合は最後まで";
             // 
             // label3
             // 
