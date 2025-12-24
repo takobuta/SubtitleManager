@@ -34,6 +34,7 @@
             this.CutEndLabel1 = new System.Windows.Forms.Label();
             this.CutEndTimeTextBox1 = new System.Windows.Forms.TextBox();
             this.OutputButton1 = new System.Windows.Forms.Button();
+            this.OutputFooterPanelTab1 = new System.Windows.Forms.Panel();
             this.CutResultTextBox1 = new System.Windows.Forms.TextBox();
             this.DeleteSubtitleCheckBox1 = new System.Windows.Forms.CheckBox();
             this.ProcessTabControl = new System.Windows.Forms.TabControl();
@@ -47,6 +48,7 @@
             this.CutStartLabel2 = new System.Windows.Forms.Label();
             this.CutResultTextBox2 = new System.Windows.Forms.TextBox();
             this.OutputButton2 = new System.Windows.Forms.Button();
+            this.OutputFooterPanelTab2 = new System.Windows.Forms.Panel();
             this.CutEndTimeTextBox2 = new System.Windows.Forms.TextBox();
             this.Cutbutton2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -70,6 +72,7 @@
             this.FilePathLabeltextBox3 = new System.Windows.Forms.TextBox();
             this.EditResultTextBox3 = new System.Windows.Forms.TextBox();
             this.OutputButton3 = new System.Windows.Forms.Button();
+            this.OutputFooterPanelTab3 = new System.Windows.Forms.Panel();
             this.SelectSubtitleFileButton3 = new System.Windows.Forms.Button();
             this.EditEndTimeTextBox3 = new System.Windows.Forms.TextBox();
             this.EditButton3 = new System.Windows.Forms.Button();
@@ -89,12 +92,15 @@
             this.SelectGaijiInfoFileButton1 = new System.Windows.Forms.Button();
             this.ProcessTabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.OutputFooterPanelTab1.SuspendLayout();
             this.UnsavedChangesPanelTab1.SuspendLayout();
             this.Tab1TopLayoutPanel.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.OutputFooterPanelTab2.SuspendLayout();
             this.UnsavedChangesPanelTab2.SuspendLayout();
             this.Tab2TopLayoutPanel.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.OutputFooterPanelTab3.SuspendLayout();
             this.UnsavedChangesPanelTab3.SuspendLayout();
             this.Tab3TopLayoutPanel.SuspendLayout();
             this.tabPage4.SuspendLayout();
@@ -240,12 +246,23 @@
             this.CutEndTimeTextBox1.Size = new System.Drawing.Size(134, 25);
             this.CutEndTimeTextBox1.TabIndex = 7;
             // 
+            // OutputFooterPanelTab1
+            // 
+            this.OutputFooterPanelTab1.Controls.Add(this.UnsavedChangesPanelTab1);
+            this.OutputFooterPanelTab1.Controls.Add(this.OutputButton1);
+            this.OutputFooterPanelTab1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.OutputFooterPanelTab1.Location = new System.Drawing.Point(3, 425);
+            this.OutputFooterPanelTab1.Name = "OutputFooterPanelTab1";
+            this.OutputFooterPanelTab1.Size = new System.Drawing.Size(591, 69);
+            this.OutputFooterPanelTab1.TabIndex = 13;
+            // 出力ボタンと未出力バナーをまとめ、上下移動のない固定領域を作る
+            // 
             // OutputButton1
             // 
             this.OutputButton1.AutoSize = true;
-            // 出力ボタンはドッキングで下端固定し、リサイズ時も一定余白を保つ
+            // 出力ボタンはフッター内で下端固定し、視線の流れを安定させる
             this.OutputButton1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.OutputButton1.Location = new System.Drawing.Point(3, 469);
+            this.OutputButton1.Location = new System.Drawing.Point(0, 44);
             this.OutputButton1.Margin = new System.Windows.Forms.Padding(10);
             this.OutputButton1.Name = "OutputButton1";
             this.OutputButton1.Padding = new System.Windows.Forms.Padding(5, 3, 5, 3);
@@ -372,8 +389,7 @@
             // Dock順序による重なりを防ぐため、Fillの結果欄を先に追加する
             this.tabPage1.Controls.Add(this.CutResultTextBox1);
             this.tabPage1.Controls.Add(this.Tab1TopLayoutPanel);
-            this.tabPage1.Controls.Add(this.OutputButton1);
-            this.tabPage1.Controls.Add(this.UnsavedChangesPanelTab1);
+            this.tabPage1.Controls.Add(this.OutputFooterPanelTab1);
             this.tabPage1.Location = new System.Drawing.Point(4, 27);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -386,15 +402,14 @@
             // 
             // UnsavedChangesPanelTab1
             // 
-            this.UnsavedChangesPanelTab1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.UnsavedChangesPanelTab1.BackColor = System.Drawing.Color.LightYellow;
             this.UnsavedChangesPanelTab1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.UnsavedChangesPanelTab1.Controls.Add(this.UnsavedChangesLabelTab1);
-            this.UnsavedChangesPanelTab1.Location = new System.Drawing.Point(3, 431);
+            this.UnsavedChangesPanelTab1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.UnsavedChangesPanelTab1.Location = new System.Drawing.Point(0, 0);
             this.UnsavedChangesPanelTab1.Name = "UnsavedChangesPanelTab1";
             this.UnsavedChangesPanelTab1.Size = new System.Drawing.Size(591, 32);
-            this.UnsavedChangesPanelTab1.TabIndex = 13;
+            this.UnsavedChangesPanelTab1.TabIndex = 0;
             this.UnsavedChangesPanelTab1.Visible = false;
             // 
             // UnsavedChangesLabelTab1
@@ -411,8 +426,7 @@
             // Dock順序による重なりを防ぐため、Fillの結果欄を先に追加する
             this.tabPage2.Controls.Add(this.CutResultTextBox2);
             this.tabPage2.Controls.Add(this.Tab2TopLayoutPanel);
-            this.tabPage2.Controls.Add(this.OutputButton2);
-            this.tabPage2.Controls.Add(this.UnsavedChangesPanelTab2);
+            this.tabPage2.Controls.Add(this.OutputFooterPanelTab2);
             this.tabPage2.Location = new System.Drawing.Point(4, 27);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -423,17 +437,27 @@
             this.tabPage2.AutoScroll = true;
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // OutputFooterPanelTab2
+            // 
+            this.OutputFooterPanelTab2.Controls.Add(this.UnsavedChangesPanelTab2);
+            this.OutputFooterPanelTab2.Controls.Add(this.OutputButton2);
+            this.OutputFooterPanelTab2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.OutputFooterPanelTab2.Location = new System.Drawing.Point(3, 425);
+            this.OutputFooterPanelTab2.Name = "OutputFooterPanelTab2";
+            this.OutputFooterPanelTab2.Size = new System.Drawing.Size(591, 69);
+            this.OutputFooterPanelTab2.TabIndex = 24;
+            // 出力ボタンと未出力バナーを固定領域にまとめて表示する
+            // 
             // UnsavedChangesPanelTab2
             // 
-            this.UnsavedChangesPanelTab2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.UnsavedChangesPanelTab2.BackColor = System.Drawing.Color.LightYellow;
             this.UnsavedChangesPanelTab2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.UnsavedChangesPanelTab2.Controls.Add(this.UnsavedChangesLabelTab2);
-            this.UnsavedChangesPanelTab2.Location = new System.Drawing.Point(3, 431);
+            this.UnsavedChangesPanelTab2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.UnsavedChangesPanelTab2.Location = new System.Drawing.Point(0, 0);
             this.UnsavedChangesPanelTab2.Name = "UnsavedChangesPanelTab2";
             this.UnsavedChangesPanelTab2.Size = new System.Drawing.Size(591, 32);
-            this.UnsavedChangesPanelTab2.TabIndex = 24;
+            this.UnsavedChangesPanelTab2.TabIndex = 0;
             this.UnsavedChangesPanelTab2.Visible = false;
             // 
             // UnsavedChangesLabelTab2
@@ -482,7 +506,7 @@
             // 
             this.OutputButton2.AutoSize = true;
             this.OutputButton2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.OutputButton2.Location = new System.Drawing.Point(3, 469);
+            this.OutputButton2.Location = new System.Drawing.Point(0, 44);
             this.OutputButton2.Margin = new System.Windows.Forms.Padding(10);
             this.OutputButton2.Name = "OutputButton2";
             this.OutputButton2.Padding = new System.Windows.Forms.Padding(5, 3, 5, 3);
@@ -563,8 +587,7 @@
             // Dock順序による重なりを防ぐため、Fillの結果欄を先に追加する
             this.tabPage3.Controls.Add(this.EditResultTextBox3);
             this.tabPage3.Controls.Add(this.Tab3TopLayoutPanel);
-            this.tabPage3.Controls.Add(this.OutputButton3);
-            this.tabPage3.Controls.Add(this.UnsavedChangesPanelTab3);
+            this.tabPage3.Controls.Add(this.OutputFooterPanelTab3);
             this.tabPage3.Location = new System.Drawing.Point(4, 27);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -575,17 +598,27 @@
             this.tabPage3.AutoScroll = true;
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // OutputFooterPanelTab3
+            // 
+            this.OutputFooterPanelTab3.Controls.Add(this.UnsavedChangesPanelTab3);
+            this.OutputFooterPanelTab3.Controls.Add(this.OutputButton3);
+            this.OutputFooterPanelTab3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.OutputFooterPanelTab3.Location = new System.Drawing.Point(3, 425);
+            this.OutputFooterPanelTab3.Name = "OutputFooterPanelTab3";
+            this.OutputFooterPanelTab3.Size = new System.Drawing.Size(591, 69);
+            this.OutputFooterPanelTab3.TabIndex = 25;
+            // 出力ボタンと未出力バナーの視認性を維持する固定領域
+            // 
             // UnsavedChangesPanelTab3
             // 
-            this.UnsavedChangesPanelTab3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.UnsavedChangesPanelTab3.BackColor = System.Drawing.Color.LightYellow;
             this.UnsavedChangesPanelTab3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.UnsavedChangesPanelTab3.Controls.Add(this.UnsavedChangesLabelTab3);
-            this.UnsavedChangesPanelTab3.Location = new System.Drawing.Point(3, 431);
+            this.UnsavedChangesPanelTab3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.UnsavedChangesPanelTab3.Location = new System.Drawing.Point(0, 0);
             this.UnsavedChangesPanelTab3.Name = "UnsavedChangesPanelTab3";
             this.UnsavedChangesPanelTab3.Size = new System.Drawing.Size(591, 32);
-            this.UnsavedChangesPanelTab3.TabIndex = 25;
+            this.UnsavedChangesPanelTab3.TabIndex = 0;
             this.UnsavedChangesPanelTab3.Visible = false;
             // 
             // UnsavedChangesLabelTab3
@@ -612,7 +645,7 @@
             // 
             this.OutputButton3.AutoSize = true;
             this.OutputButton3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.OutputButton3.Location = new System.Drawing.Point(3, 469);
+            this.OutputButton3.Location = new System.Drawing.Point(0, 44);
             this.OutputButton3.Margin = new System.Windows.Forms.Padding(10);
             this.OutputButton3.Name = "OutputButton3";
             this.OutputButton3.Padding = new System.Windows.Forms.Padding(5, 3, 5, 3);
@@ -944,16 +977,19 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SubtitleParserForm_FormClosing);
             this.ProcessTabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.OutputFooterPanelTab1.ResumeLayout(false);
             this.UnsavedChangesPanelTab1.ResumeLayout(false);
             this.UnsavedChangesPanelTab1.PerformLayout();
             this.Tab1TopLayoutPanel.ResumeLayout(false);
             this.Tab1TopLayoutPanel.PerformLayout();
             this.tabPage2.ResumeLayout(false);
+            this.OutputFooterPanelTab2.ResumeLayout(false);
             this.UnsavedChangesPanelTab2.ResumeLayout(false);
             this.UnsavedChangesPanelTab2.PerformLayout();
             this.Tab2TopLayoutPanel.ResumeLayout(false);
             this.Tab2TopLayoutPanel.PerformLayout();
             this.tabPage3.ResumeLayout(false);
+            this.OutputFooterPanelTab3.ResumeLayout(false);
             this.UnsavedChangesPanelTab3.ResumeLayout(false);
             this.UnsavedChangesPanelTab3.PerformLayout();
             this.Tab3TopLayoutPanel.ResumeLayout(false);
@@ -986,6 +1022,7 @@
         private System.Windows.Forms.Label CutEndLabel1;
         private System.Windows.Forms.TextBox CutEndTimeTextBox1;
         private System.Windows.Forms.Button OutputButton1;
+        private System.Windows.Forms.Panel OutputFooterPanelTab1;
         private System.Windows.Forms.TextBox CutResultTextBox1;
         private System.Windows.Forms.CheckBox DeleteSubtitleCheckBox1;
         private System.Windows.Forms.TabControl ProcessTabControl;
@@ -995,6 +1032,7 @@
         private System.Windows.Forms.Button SelectMovieFileButton;
         private System.Windows.Forms.TextBox CutResultTextBox2;
         private System.Windows.Forms.Button OutputButton2;
+        private System.Windows.Forms.Panel OutputFooterPanelTab2;
         private System.Windows.Forms.TextBox CutEndTimeTextBox2;
         private System.Windows.Forms.Button Cutbutton2;
         private System.Windows.Forms.Label label2;
@@ -1005,6 +1043,7 @@
         private System.Windows.Forms.TextBox FilePathLabeltextBox3;
         private System.Windows.Forms.TextBox EditResultTextBox3;
         private System.Windows.Forms.Button OutputButton3;
+        private System.Windows.Forms.Panel OutputFooterPanelTab3;
         private System.Windows.Forms.Button SelectSubtitleFileButton3;
         private System.Windows.Forms.TextBox EditEndTimeTextBox3;
         private System.Windows.Forms.Button EditButton3;
