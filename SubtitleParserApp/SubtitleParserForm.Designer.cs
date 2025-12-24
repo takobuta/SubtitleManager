@@ -380,8 +380,9 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.Tab1TopLayoutPanel);
+            // Dock順序による重なりを防ぐため、Fillの結果欄を先に追加する
             this.tabPage1.Controls.Add(this.CutResultTextBox1);
+            this.tabPage1.Controls.Add(this.Tab1TopLayoutPanel);
             this.tabPage1.Controls.Add(this.OutputButton1);
             this.tabPage1.Location = new System.Drawing.Point(4, 27);
             this.tabPage1.Name = "tabPage1";
@@ -395,8 +396,9 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.Tab2TopLayoutPanel);
+            // Dock順序による重なりを防ぐため、Fillの結果欄を先に追加する
             this.tabPage2.Controls.Add(this.CutResultTextBox2);
+            this.tabPage2.Controls.Add(this.Tab2TopLayoutPanel);
             this.tabPage2.Controls.Add(this.OutputButton2);
             this.tabPage2.Location = new System.Drawing.Point(4, 27);
             this.tabPage2.Name = "tabPage2";
@@ -523,8 +525,9 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.Tab3TopLayoutPanel);
+            // Dock順序による重なりを防ぐため、Fillの結果欄を先に追加する
             this.tabPage3.Controls.Add(this.EditResultTextBox3);
+            this.tabPage3.Controls.Add(this.Tab3TopLayoutPanel);
             this.tabPage3.Controls.Add(this.OutputButton3);
             this.tabPage3.Location = new System.Drawing.Point(4, 27);
             this.tabPage3.Name = "tabPage3";
