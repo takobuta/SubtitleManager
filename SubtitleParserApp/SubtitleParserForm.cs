@@ -400,7 +400,11 @@ namespace SubtitleParserApp {
 
         // 未出力状態をユーザーに明示するための視覚的フィードバックとしてバナーの表示を更新する。
         private void UpdateUnsavedChangesBanner() {
-            UnsavedChangesPanel.Visible = _hasUnsavedChanges;
+            // 出力ボタン付近のバナーを全タブで同期表示し、操作導線の直上に注意喚起を配置する。
+            UnsavedChangesPanelTab1.Visible = _hasUnsavedChanges;
+            UnsavedChangesPanelTab2.Visible = _hasUnsavedChanges;
+            UnsavedChangesPanelTab3.Visible = _hasUnsavedChanges;
+            UnsavedChangesPanelTab4.Visible = _hasUnsavedChanges;
         }
 
         // フォームを閉じる際に、未出力の編集が残っていないかを確認する。

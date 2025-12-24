@@ -23,8 +23,6 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.UnsavedChangesPanel = new System.Windows.Forms.Panel();
-            this.UnsavedChangesLabel = new System.Windows.Forms.Label();
             this.Tab1TopLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.SelectSubtitleFileButton = new System.Windows.Forms.Button();
             this.TextCountLabel = new System.Windows.Forms.Label();
@@ -40,7 +38,11 @@
             this.DeleteSubtitleCheckBox1 = new System.Windows.Forms.CheckBox();
             this.ProcessTabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.UnsavedChangesPanelTab1 = new System.Windows.Forms.Panel();
+            this.UnsavedChangesLabelTab1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.UnsavedChangesPanelTab2 = new System.Windows.Forms.Panel();
+            this.UnsavedChangesLabelTab2 = new System.Windows.Forms.Label();
             this.CutEndLabel2 = new System.Windows.Forms.Label();
             this.CutStartLabel2 = new System.Windows.Forms.Label();
             this.CutResultTextBox2 = new System.Windows.Forms.TextBox();
@@ -53,6 +55,8 @@
             this.SelectMovieFileButton = new System.Windows.Forms.Button();
             this.Tab2TopLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.UnsavedChangesPanelTab3 = new System.Windows.Forms.Panel();
+            this.UnsavedChangesLabelTab3 = new System.Windows.Forms.Label();
             this.Tab3TopLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.AdjustmentDirectionLabel3 = new System.Windows.Forms.Label();
             this.OffsetLabel3 = new System.Windows.Forms.Label();
@@ -72,6 +76,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.EditStartTimeTextBox3 = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.UnsavedChangesPanelTab4 = new System.Windows.Forms.Panel();
+            this.UnsavedChangesLabelTab4 = new System.Windows.Forms.Label();
             this.ResultLabel4 = new System.Windows.Forms.Label();
             this.OutputButton4 = new System.Windows.Forms.Button();
             this.GaijiInfoFilePathLabeltextBox4 = new System.Windows.Forms.TextBox();
@@ -81,36 +87,19 @@
             this.ReplaceGaijiCheckBox1 = new System.Windows.Forms.CheckBox();
             this.GaijiInfoFilePathLabeltextBox1 = new System.Windows.Forms.TextBox();
             this.SelectGaijiInfoFileButton1 = new System.Windows.Forms.Button();
-            this.UnsavedChangesPanel.SuspendLayout();
             this.ProcessTabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.UnsavedChangesPanelTab1.SuspendLayout();
             this.Tab1TopLayoutPanel.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.UnsavedChangesPanelTab2.SuspendLayout();
             this.Tab2TopLayoutPanel.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.UnsavedChangesPanelTab3.SuspendLayout();
             this.Tab3TopLayoutPanel.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.UnsavedChangesPanelTab4.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // UnsavedChangesPanel
-            // 
-            this.UnsavedChangesPanel.BackColor = System.Drawing.Color.LightYellow;
-            this.UnsavedChangesPanel.Controls.Add(this.UnsavedChangesLabel);
-            this.UnsavedChangesPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.UnsavedChangesPanel.Location = new System.Drawing.Point(0, 0);
-            this.UnsavedChangesPanel.Name = "UnsavedChangesPanel";
-            this.UnsavedChangesPanel.Size = new System.Drawing.Size(602, 44);
-            this.UnsavedChangesPanel.TabIndex = 12;
-            this.UnsavedChangesPanel.Visible = false;
-            // 
-            // UnsavedChangesLabel
-            // 
-            this.UnsavedChangesLabel.AutoSize = true;
-            this.UnsavedChangesLabel.Location = new System.Drawing.Point(12, 12);
-            this.UnsavedChangesLabel.Name = "UnsavedChangesLabel";
-            this.UnsavedChangesLabel.Size = new System.Drawing.Size(188, 18);
-            this.UnsavedChangesLabel.TabIndex = 0;
-            this.UnsavedChangesLabel.Text = "未出力の編集内容があります";
             // 
             // Tab1TopLayoutPanel
             // 
@@ -384,6 +373,7 @@
             this.tabPage1.Controls.Add(this.CutResultTextBox1);
             this.tabPage1.Controls.Add(this.Tab1TopLayoutPanel);
             this.tabPage1.Controls.Add(this.OutputButton1);
+            this.tabPage1.Controls.Add(this.UnsavedChangesPanelTab1);
             this.tabPage1.Location = new System.Drawing.Point(4, 27);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -394,12 +384,35 @@
             this.tabPage1.AutoScroll = true;
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // UnsavedChangesPanelTab1
+            // 
+            this.UnsavedChangesPanelTab1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.UnsavedChangesPanelTab1.BackColor = System.Drawing.Color.LightYellow;
+            this.UnsavedChangesPanelTab1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.UnsavedChangesPanelTab1.Controls.Add(this.UnsavedChangesLabelTab1);
+            this.UnsavedChangesPanelTab1.Location = new System.Drawing.Point(3, 431);
+            this.UnsavedChangesPanelTab1.Name = "UnsavedChangesPanelTab1";
+            this.UnsavedChangesPanelTab1.Size = new System.Drawing.Size(591, 32);
+            this.UnsavedChangesPanelTab1.TabIndex = 13;
+            this.UnsavedChangesPanelTab1.Visible = false;
+            // 
+            // UnsavedChangesLabelTab1
+            // 
+            this.UnsavedChangesLabelTab1.AutoSize = true;
+            this.UnsavedChangesLabelTab1.Location = new System.Drawing.Point(12, 7);
+            this.UnsavedChangesLabelTab1.Name = "UnsavedChangesLabelTab1";
+            this.UnsavedChangesLabelTab1.Size = new System.Drawing.Size(188, 18);
+            this.UnsavedChangesLabelTab1.TabIndex = 0;
+            this.UnsavedChangesLabelTab1.Text = "未出力の編集内容があります";
+            // 
             // tabPage2
             // 
             // Dock順序による重なりを防ぐため、Fillの結果欄を先に追加する
             this.tabPage2.Controls.Add(this.CutResultTextBox2);
             this.tabPage2.Controls.Add(this.Tab2TopLayoutPanel);
             this.tabPage2.Controls.Add(this.OutputButton2);
+            this.tabPage2.Controls.Add(this.UnsavedChangesPanelTab2);
             this.tabPage2.Location = new System.Drawing.Point(4, 27);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -409,6 +422,28 @@
             // 縮小時はスクロールで下部コントロールを表示
             this.tabPage2.AutoScroll = true;
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // UnsavedChangesPanelTab2
+            // 
+            this.UnsavedChangesPanelTab2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.UnsavedChangesPanelTab2.BackColor = System.Drawing.Color.LightYellow;
+            this.UnsavedChangesPanelTab2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.UnsavedChangesPanelTab2.Controls.Add(this.UnsavedChangesLabelTab2);
+            this.UnsavedChangesPanelTab2.Location = new System.Drawing.Point(3, 431);
+            this.UnsavedChangesPanelTab2.Name = "UnsavedChangesPanelTab2";
+            this.UnsavedChangesPanelTab2.Size = new System.Drawing.Size(591, 32);
+            this.UnsavedChangesPanelTab2.TabIndex = 24;
+            this.UnsavedChangesPanelTab2.Visible = false;
+            // 
+            // UnsavedChangesLabelTab2
+            // 
+            this.UnsavedChangesLabelTab2.AutoSize = true;
+            this.UnsavedChangesLabelTab2.Location = new System.Drawing.Point(12, 7);
+            this.UnsavedChangesLabelTab2.Name = "UnsavedChangesLabelTab2";
+            this.UnsavedChangesLabelTab2.Size = new System.Drawing.Size(188, 18);
+            this.UnsavedChangesLabelTab2.TabIndex = 0;
+            this.UnsavedChangesLabelTab2.Text = "未出力の編集内容があります";
             // 
             // CutEndLabel2
             // 
@@ -529,6 +564,7 @@
             this.tabPage3.Controls.Add(this.EditResultTextBox3);
             this.tabPage3.Controls.Add(this.Tab3TopLayoutPanel);
             this.tabPage3.Controls.Add(this.OutputButton3);
+            this.tabPage3.Controls.Add(this.UnsavedChangesPanelTab3);
             this.tabPage3.Location = new System.Drawing.Point(4, 27);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -538,6 +574,28 @@
             // 縮小時にスクロール可能にしてボタンの上方移動を防止
             this.tabPage3.AutoScroll = true;
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // UnsavedChangesPanelTab3
+            // 
+            this.UnsavedChangesPanelTab3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.UnsavedChangesPanelTab3.BackColor = System.Drawing.Color.LightYellow;
+            this.UnsavedChangesPanelTab3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.UnsavedChangesPanelTab3.Controls.Add(this.UnsavedChangesLabelTab3);
+            this.UnsavedChangesPanelTab3.Location = new System.Drawing.Point(3, 431);
+            this.UnsavedChangesPanelTab3.Name = "UnsavedChangesPanelTab3";
+            this.UnsavedChangesPanelTab3.Size = new System.Drawing.Size(591, 32);
+            this.UnsavedChangesPanelTab3.TabIndex = 25;
+            this.UnsavedChangesPanelTab3.Visible = false;
+            // 
+            // UnsavedChangesLabelTab3
+            // 
+            this.UnsavedChangesLabelTab3.AutoSize = true;
+            this.UnsavedChangesLabelTab3.Location = new System.Drawing.Point(12, 7);
+            this.UnsavedChangesLabelTab3.Name = "UnsavedChangesLabelTab3";
+            this.UnsavedChangesLabelTab3.Size = new System.Drawing.Size(188, 18);
+            this.UnsavedChangesLabelTab3.TabIndex = 0;
+            this.UnsavedChangesLabelTab3.Text = "未出力の編集内容があります";
             // 
             // EditResultTextBox3
             // 
@@ -735,6 +793,7 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.UnsavedChangesPanelTab4);
             this.tabPage4.Controls.Add(this.ResultLabel4);
             this.tabPage4.Controls.Add(this.OutputButton4);
             this.tabPage4.Controls.Add(this.GaijiInfoFilePathLabeltextBox4);
@@ -750,6 +809,28 @@
             // フォーム縮小時に重なりを避けるためスクロールを有効化
             this.tabPage4.AutoScroll = true;
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // UnsavedChangesPanelTab4
+            // 
+            this.UnsavedChangesPanelTab4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.UnsavedChangesPanelTab4.BackColor = System.Drawing.Color.LightYellow;
+            this.UnsavedChangesPanelTab4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.UnsavedChangesPanelTab4.Controls.Add(this.UnsavedChangesLabelTab4);
+            this.UnsavedChangesPanelTab4.Location = new System.Drawing.Point(9, 109);
+            this.UnsavedChangesPanelTab4.Name = "UnsavedChangesPanelTab4";
+            this.UnsavedChangesPanelTab4.Size = new System.Drawing.Size(566, 28);
+            this.UnsavedChangesPanelTab4.TabIndex = 20;
+            this.UnsavedChangesPanelTab4.Visible = false;
+            // 
+            // UnsavedChangesLabelTab4
+            // 
+            this.UnsavedChangesLabelTab4.AutoSize = true;
+            this.UnsavedChangesLabelTab4.Location = new System.Drawing.Point(12, 5);
+            this.UnsavedChangesLabelTab4.Name = "UnsavedChangesLabelTab4";
+            this.UnsavedChangesLabelTab4.Size = new System.Drawing.Size(188, 18);
+            this.UnsavedChangesLabelTab4.TabIndex = 0;
+            this.UnsavedChangesLabelTab4.Text = "未出力の編集内容があります";
             // 
             // ResultLabel4
             // 
@@ -856,25 +937,30 @@
             // 初期表示サイズを最小サイズとして固定し、これ以上小さくならないよう制約
             this.MinimumSize = new System.Drawing.Size(618, 611);
             this.Controls.Add(this.ProcessTabControl);
-            this.Controls.Add(this.UnsavedChangesPanel);
             this.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SubtitleParserForm";
             this.Text = "字幕編集";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SubtitleParserForm_FormClosing);
-            this.UnsavedChangesPanel.ResumeLayout(false);
-            this.UnsavedChangesPanel.PerformLayout();
             this.ProcessTabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.UnsavedChangesPanelTab1.ResumeLayout(false);
+            this.UnsavedChangesPanelTab1.PerformLayout();
             this.Tab1TopLayoutPanel.ResumeLayout(false);
             this.Tab1TopLayoutPanel.PerformLayout();
             this.tabPage2.ResumeLayout(false);
+            this.UnsavedChangesPanelTab2.ResumeLayout(false);
+            this.UnsavedChangesPanelTab2.PerformLayout();
             this.Tab2TopLayoutPanel.ResumeLayout(false);
             this.Tab2TopLayoutPanel.PerformLayout();
             this.tabPage3.ResumeLayout(false);
+            this.UnsavedChangesPanelTab3.ResumeLayout(false);
+            this.UnsavedChangesPanelTab3.PerformLayout();
             this.Tab3TopLayoutPanel.ResumeLayout(false);
             this.Tab3TopLayoutPanel.PerformLayout();
             this.tabPage4.ResumeLayout(false);
+            this.UnsavedChangesPanelTab4.ResumeLayout(false);
+            this.UnsavedChangesPanelTab4.PerformLayout();
             this.tabPage4.PerformLayout();
             this.ResumeLayout(false);
 
@@ -882,8 +968,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel UnsavedChangesPanel;
-        private System.Windows.Forms.Label UnsavedChangesLabel;
+        private System.Windows.Forms.Panel UnsavedChangesPanelTab1;
+        private System.Windows.Forms.Label UnsavedChangesLabelTab1;
+        private System.Windows.Forms.Panel UnsavedChangesPanelTab2;
+        private System.Windows.Forms.Label UnsavedChangesLabelTab2;
+        private System.Windows.Forms.Panel UnsavedChangesPanelTab3;
+        private System.Windows.Forms.Label UnsavedChangesLabelTab3;
+        private System.Windows.Forms.Panel UnsavedChangesPanelTab4;
+        private System.Windows.Forms.Label UnsavedChangesLabelTab4;
         private System.Windows.Forms.Button SelectSubtitleFileButton;
         private System.Windows.Forms.Label TextCountLabel;
         private System.Windows.Forms.TextBox FilePathLabeltextBox;
