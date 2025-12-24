@@ -25,6 +25,7 @@
         private void InitializeComponent() {
             this.UnsavedChangesPanel = new System.Windows.Forms.Panel();
             this.UnsavedChangesLabel = new System.Windows.Forms.Label();
+            this.Tab1TopLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.SelectSubtitleFileButton = new System.Windows.Forms.Button();
             this.TextCountLabel = new System.Windows.Forms.Label();
             this.FilePathLabeltextBox = new System.Windows.Forms.TextBox();
@@ -50,7 +51,9 @@
             this.CutStartTimeTextBox2 = new System.Windows.Forms.TextBox();
             this.MovieFilePathLabelTextBox = new System.Windows.Forms.TextBox();
             this.SelectMovieFileButton = new System.Windows.Forms.Button();
+            this.Tab2TopLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.Tab3TopLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.AdjustmentDirectionLabel3 = new System.Windows.Forms.Label();
             this.OffsetLabel3 = new System.Windows.Forms.Label();
             this.EditEndLabel3 = new System.Windows.Forms.Label();
@@ -81,8 +84,11 @@
             this.UnsavedChangesPanel.SuspendLayout();
             this.ProcessTabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.Tab1TopLayoutPanel.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.Tab2TopLayoutPanel.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.Tab3TopLayoutPanel.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -106,13 +112,58 @@
             this.UnsavedChangesLabel.TabIndex = 0;
             this.UnsavedChangesLabel.Text = "未出力の編集内容があります";
             // 
+            // Tab1TopLayoutPanel
+            // 
+            this.Tab1TopLayoutPanel.AutoSize = true;
+            this.Tab1TopLayoutPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Tab1TopLayoutPanel.ColumnCount = 4;
+            this.Tab1TopLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.Tab1TopLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.Tab1TopLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.Tab1TopLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.Tab1TopLayoutPanel.Controls.Add(this.SelectSubtitleFileButton, 0, 0);
+            this.Tab1TopLayoutPanel.Controls.Add(this.FilePathLabeltextBox, 1, 0);
+            this.Tab1TopLayoutPanel.SetColumnSpan(this.FilePathLabeltextBox, 3);
+            this.Tab1TopLayoutPanel.Controls.Add(this.CutStartLabel1, 0, 1);
+            this.Tab1TopLayoutPanel.Controls.Add(this.CutStartTimeTextBox1, 1, 1);
+            this.Tab1TopLayoutPanel.Controls.Add(this.Namilabel, 2, 1);
+            this.Tab1TopLayoutPanel.Controls.Add(this.CutEndLabel1, 0, 2);
+            this.Tab1TopLayoutPanel.Controls.Add(this.CutEndTimeTextBox1, 1, 2);
+            this.Tab1TopLayoutPanel.Controls.Add(this.CutButton1, 1, 3);
+            this.Tab1TopLayoutPanel.SetColumnSpan(this.CutButton1, 2);
+            this.Tab1TopLayoutPanel.Controls.Add(this.TextCountLabel, 1, 4);
+            this.Tab1TopLayoutPanel.SetColumnSpan(this.TextCountLabel, 3);
+            this.Tab1TopLayoutPanel.Controls.Add(this.DeleteSubtitleCheckBox1, 0, 5);
+            this.Tab1TopLayoutPanel.SetColumnSpan(this.DeleteSubtitleCheckBox1, 4);
+            this.Tab1TopLayoutPanel.Controls.Add(this.ReplaceGaijiCheckBox1, 0, 6);
+            this.Tab1TopLayoutPanel.SetColumnSpan(this.ReplaceGaijiCheckBox1, 4);
+            this.Tab1TopLayoutPanel.Controls.Add(this.SelectGaijiInfoFileButton1, 0, 7);
+            this.Tab1TopLayoutPanel.Controls.Add(this.GaijiInfoFilePathLabeltextBox1, 1, 7);
+            this.Tab1TopLayoutPanel.SetColumnSpan(this.GaijiInfoFilePathLabeltextBox1, 3);
+            this.Tab1TopLayoutPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Tab1TopLayoutPanel.Location = new System.Drawing.Point(3, 3);
+            this.Tab1TopLayoutPanel.Name = "Tab1TopLayoutPanel";
+            this.Tab1TopLayoutPanel.Padding = new System.Windows.Forms.Padding(10);
+            this.Tab1TopLayoutPanel.RowCount = 8;
+            this.Tab1TopLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Tab1TopLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Tab1TopLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Tab1TopLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Tab1TopLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Tab1TopLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Tab1TopLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Tab1TopLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Tab1TopLayoutPanel.Size = new System.Drawing.Size(591, 322);
+            this.Tab1TopLayoutPanel.TabIndex = 23;
+            // 上部レイアウトを統一し、ラベルと入力欄の整列を自動化するためのテーブル
+            // 
             // SelectSubtitleFileButton
             // 
-            this.SelectSubtitleFileButton.Location = new System.Drawing.Point(9, 17);
-            // 右アンカーによる水平移動で入力欄に重ならないよう、左固定のアンカーに変更
-            this.SelectSubtitleFileButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
+            this.SelectSubtitleFileButton.AutoSize = true;
+            this.SelectSubtitleFileButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SelectSubtitleFileButton.Margin = new System.Windows.Forms.Padding(6);
             this.SelectSubtitleFileButton.Name = "SelectSubtitleFileButton";
-            this.SelectSubtitleFileButton.Size = new System.Drawing.Size(137, 25);
+            this.SelectSubtitleFileButton.Size = new System.Drawing.Size(134, 37);
             this.SelectSubtitleFileButton.TabIndex = 0;
             this.SelectSubtitleFileButton.Text = "字幕ファイル選択";
             this.SelectSubtitleFileButton.UseVisualStyleBackColor = true;
@@ -121,29 +172,28 @@
             // TextCountLabel
             // 
             this.TextCountLabel.AutoSize = true;
-            this.TextCountLabel.Location = new System.Drawing.Point(159, 45);
+            this.TextCountLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TextCountLabel.Margin = new System.Windows.Forms.Padding(6);
             this.TextCountLabel.Name = "TextCountLabel";
-            this.TextCountLabel.Size = new System.Drawing.Size(0, 18);
+            this.TextCountLabel.Size = new System.Drawing.Size(131, 18);
             this.TextCountLabel.TabIndex = 2;
             // 
             // FilePathLabeltextBox
             // 
-            this.FilePathLabeltextBox.Location = new System.Drawing.Point(152, 17);
-            // リサイズ時に左右へ自然に広がるようアンカーを設定
-            this.FilePathLabeltextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.FilePathLabeltextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FilePathLabeltextBox.Margin = new System.Windows.Forms.Padding(6);
             this.FilePathLabeltextBox.Name = "FilePathLabeltextBox";
             this.FilePathLabeltextBox.ReadOnly = true;
-            this.FilePathLabeltextBox.Size = new System.Drawing.Size(423, 25);
+            this.FilePathLabeltextBox.Size = new System.Drawing.Size(429, 25);
             this.FilePathLabeltextBox.TabIndex = 3;
             // 
             // CutButton1
             // 
-            this.CutButton1.Location = new System.Drawing.Point(304, 80);
-            // カットボタンはリサイズで位置が動かないよう左基準で固定
-            this.CutButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
+            this.CutButton1.AutoSize = true;
+            this.CutButton1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CutButton1.Margin = new System.Windows.Forms.Padding(6);
             this.CutButton1.Name = "CutButton1";
-            this.CutButton1.Size = new System.Drawing.Size(137, 25);
+            this.CutButton1.Size = new System.Drawing.Size(134, 37);
             this.CutButton1.TabIndex = 4;
             this.CutButton1.Text = "カット編集";
             this.CutButton1.UseVisualStyleBackColor = true;
@@ -151,55 +201,66 @@
             // 
             // CutStartLabel1
             // 
-            this.CutStartLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
             this.CutStartLabel1.AutoSize = true;
-            this.CutStartLabel1.Location = new System.Drawing.Point(9, 59);
+            this.CutStartLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CutStartLabel1.Location = new System.Drawing.Point(16, 60);
+            this.CutStartLabel1.Margin = new System.Windows.Forms.Padding(6);
             this.CutStartLabel1.Name = "CutStartLabel1";
-            this.CutStartLabel1.Size = new System.Drawing.Size(32, 18);
+            this.CutStartLabel1.Size = new System.Drawing.Size(134, 18);
             this.CutStartLabel1.TabIndex = 19;
             this.CutStartLabel1.Text = "開始";
             // 
             // CutStartTimeTextBox1
             // 
-            this.CutStartTimeTextBox1.Location = new System.Drawing.Point(9, 80);
+            this.CutStartTimeTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CutStartTimeTextBox1.Location = new System.Drawing.Point(164, 60);
+            this.CutStartTimeTextBox1.Margin = new System.Windows.Forms.Padding(6);
             this.CutStartTimeTextBox1.Name = "CutStartTimeTextBox1";
-            this.CutStartTimeTextBox1.Size = new System.Drawing.Size(124, 25);
+            this.CutStartTimeTextBox1.Size = new System.Drawing.Size(134, 25);
             this.CutStartTimeTextBox1.TabIndex = 5;
             this.CutStartTimeTextBox1.Text = "00:00:00.000";
             // 
             // Namilabel
             // 
             this.Namilabel.AutoSize = true;
-            this.Namilabel.Location = new System.Drawing.Point(139, 83);
+            this.Namilabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Namilabel.Location = new System.Drawing.Point(312, 60);
+            this.Namilabel.Margin = new System.Windows.Forms.Padding(6);
             this.Namilabel.Name = "Namilabel";
-            this.Namilabel.Size = new System.Drawing.Size(20, 18);
+            this.Namilabel.Size = new System.Drawing.Size(134, 18);
             this.Namilabel.TabIndex = 6;
             this.Namilabel.Text = "～";
             // 
             // CutEndLabel1
             // 
-            this.CutEndLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
             this.CutEndLabel1.AutoSize = true;
-            this.CutEndLabel1.Location = new System.Drawing.Point(165, 59);
+            this.CutEndLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CutEndLabel1.Location = new System.Drawing.Point(16, 99);
+            this.CutEndLabel1.Margin = new System.Windows.Forms.Padding(6);
             this.CutEndLabel1.Name = "CutEndLabel1";
-            this.CutEndLabel1.Size = new System.Drawing.Size(32, 18);
+            this.CutEndLabel1.Size = new System.Drawing.Size(134, 18);
             this.CutEndLabel1.TabIndex = 20;
             this.CutEndLabel1.Text = "終了";
             // 
             // CutEndTimeTextBox1
             // 
-            this.CutEndTimeTextBox1.Location = new System.Drawing.Point(165, 80);
+            this.CutEndTimeTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CutEndTimeTextBox1.Location = new System.Drawing.Point(164, 99);
+            this.CutEndTimeTextBox1.Margin = new System.Windows.Forms.Padding(6);
             this.CutEndTimeTextBox1.Name = "CutEndTimeTextBox1";
-            this.CutEndTimeTextBox1.Size = new System.Drawing.Size(124, 25);
+            this.CutEndTimeTextBox1.Size = new System.Drawing.Size(134, 25);
             this.CutEndTimeTextBox1.TabIndex = 7;
             // 
             // OutputButton1
             // 
-            this.OutputButton1.Location = new System.Drawing.Point(9, 363);
-            // 出力ボタンは下端基準で固定し、縦リサイズ時に結果欄と重ならないようにする
-            this.OutputButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.OutputButton1.AutoSize = true;
+            // 出力ボタンはドッキングで下端固定し、リサイズ時も一定余白を保つ
+            this.OutputButton1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.OutputButton1.Location = new System.Drawing.Point(3, 469);
+            this.OutputButton1.Margin = new System.Windows.Forms.Padding(10);
             this.OutputButton1.Name = "OutputButton1";
-            this.OutputButton1.Size = new System.Drawing.Size(137, 25);
+            this.OutputButton1.Padding = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.OutputButton1.Size = new System.Drawing.Size(591, 25);
             this.OutputButton1.TabIndex = 8;
             this.OutputButton1.Text = "出力";
             this.OutputButton1.UseVisualStyleBackColor = true;
@@ -207,15 +268,13 @@
             // 
             // CutResultTextBox1
             // 
-            this.CutResultTextBox1.Location = new System.Drawing.Point(9, 220);
-            // クリップボックスがフォームサイズに追従するよう四辺にアンカーを設定
-            this.CutResultTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CutResultTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CutResultTextBox1.Location = new System.Drawing.Point(3, 286);
+            this.CutResultTextBox1.Margin = new System.Windows.Forms.Padding(10);
             this.CutResultTextBox1.Multiline = true;
             this.CutResultTextBox1.Name = "CutResultTextBox1";
             this.CutResultTextBox1.ReadOnly = true;
-            this.CutResultTextBox1.Size = new System.Drawing.Size(566, 137);
+            this.CutResultTextBox1.Size = new System.Drawing.Size(591, 183);
             this.CutResultTextBox1.TabIndex = 9;
             // 
             // DeleteSubtitleCheckBox1
@@ -223,12 +282,88 @@
             this.DeleteSubtitleCheckBox1.AutoSize = true;
             this.DeleteSubtitleCheckBox1.Checked = true;
             this.DeleteSubtitleCheckBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.DeleteSubtitleCheckBox1.Location = new System.Drawing.Point(9, 112);
+            this.DeleteSubtitleCheckBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DeleteSubtitleCheckBox1.Location = new System.Drawing.Point(16, 177);
+            this.DeleteSubtitleCheckBox1.Margin = new System.Windows.Forms.Padding(6);
             this.DeleteSubtitleCheckBox1.Name = "DeleteSubtitleCheckBox1";
-            this.DeleteSubtitleCheckBox1.Size = new System.Drawing.Size(195, 22);
+            this.DeleteSubtitleCheckBox1.Size = new System.Drawing.Size(559, 22);
             this.DeleteSubtitleCheckBox1.TabIndex = 10;
             this.DeleteSubtitleCheckBox1.Text = "カット範囲内の字幕は削除する";
             this.DeleteSubtitleCheckBox1.UseVisualStyleBackColor = true;
+            // 
+            // Tab2TopLayoutPanel
+            // 
+            this.Tab2TopLayoutPanel.AutoSize = true;
+            this.Tab2TopLayoutPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Tab2TopLayoutPanel.ColumnCount = 4;
+            this.Tab2TopLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.Tab2TopLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.Tab2TopLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.Tab2TopLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.Tab2TopLayoutPanel.Controls.Add(this.SelectMovieFileButton, 0, 0);
+            this.Tab2TopLayoutPanel.Controls.Add(this.MovieFilePathLabelTextBox, 1, 0);
+            this.Tab2TopLayoutPanel.SetColumnSpan(this.MovieFilePathLabelTextBox, 3);
+            this.Tab2TopLayoutPanel.Controls.Add(this.CutStartLabel2, 0, 1);
+            this.Tab2TopLayoutPanel.Controls.Add(this.CutStartTimeTextBox2, 1, 1);
+            this.Tab2TopLayoutPanel.Controls.Add(this.label2, 2, 1);
+            this.Tab2TopLayoutPanel.Controls.Add(this.CutEndLabel2, 0, 2);
+            this.Tab2TopLayoutPanel.Controls.Add(this.CutEndTimeTextBox2, 1, 2);
+            this.Tab2TopLayoutPanel.Controls.Add(this.Cutbutton2, 1, 3);
+            this.Tab2TopLayoutPanel.SetColumnSpan(this.Cutbutton2, 2);
+            this.Tab2TopLayoutPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Tab2TopLayoutPanel.Location = new System.Drawing.Point(3, 3);
+            this.Tab2TopLayoutPanel.Name = "Tab2TopLayoutPanel";
+            this.Tab2TopLayoutPanel.Padding = new System.Windows.Forms.Padding(10);
+            this.Tab2TopLayoutPanel.RowCount = 4;
+            this.Tab2TopLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Tab2TopLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Tab2TopLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Tab2TopLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Tab2TopLayoutPanel.Size = new System.Drawing.Size(591, 155);
+            this.Tab2TopLayoutPanel.TabIndex = 23;
+            // ①カット（字幕編集）と揃えた行列配置で視線の流れを統一するテーブル
+            // 
+            // Tab3TopLayoutPanel
+            // 
+            this.Tab3TopLayoutPanel.AutoSize = true;
+            this.Tab3TopLayoutPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Tab3TopLayoutPanel.ColumnCount = 4;
+            this.Tab3TopLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.Tab3TopLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.Tab3TopLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.Tab3TopLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.Tab3TopLayoutPanel.Controls.Add(this.SelectSubtitleFileButton3, 0, 0);
+            this.Tab3TopLayoutPanel.Controls.Add(this.FilePathLabeltextBox3, 1, 0);
+            this.Tab3TopLayoutPanel.SetColumnSpan(this.FilePathLabeltextBox3, 3);
+            this.Tab3TopLayoutPanel.Controls.Add(this.EditStartLabel3, 0, 1);
+            this.Tab3TopLayoutPanel.Controls.Add(this.EditStartTimeTextBox3, 1, 1);
+            this.Tab3TopLayoutPanel.Controls.Add(this.label3, 2, 1);
+            this.Tab3TopLayoutPanel.Controls.Add(this.EditEndLabel3, 0, 2);
+            this.Tab3TopLayoutPanel.Controls.Add(this.EditEndTimeTextBox3, 1, 2);
+            this.Tab3TopLayoutPanel.Controls.Add(this.AdjustmentDirectionLabel3, 2, 2);
+            this.Tab3TopLayoutPanel.Controls.Add(this.OffsetLabel3, 0, 3);
+            this.Tab3TopLayoutPanel.Controls.Add(this.OffsetTextBox3, 1, 3);
+            this.Tab3TopLayoutPanel.Controls.Add(this.ForwardRadioButton, 2, 3);
+            this.Tab3TopLayoutPanel.Controls.Add(this.DelayRadioButton, 3, 3);
+            this.Tab3TopLayoutPanel.Controls.Add(this.EditButton3, 3, 4);
+            this.Tab3TopLayoutPanel.Controls.Add(this.TextCountLabel3, 1, 4);
+            this.Tab3TopLayoutPanel.SetColumnSpan(this.TextCountLabel3, 2);
+            this.Tab3TopLayoutPanel.Controls.Add(this.label4, 1, 5);
+            this.Tab3TopLayoutPanel.SetColumnSpan(this.label4, 3);
+            this.Tab3TopLayoutPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Tab3TopLayoutPanel.Location = new System.Drawing.Point(3, 3);
+            this.Tab3TopLayoutPanel.Name = "Tab3TopLayoutPanel";
+            this.Tab3TopLayoutPanel.Padding = new System.Windows.Forms.Padding(10);
+            this.Tab3TopLayoutPanel.RowCount = 6;
+            this.Tab3TopLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Tab3TopLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Tab3TopLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Tab3TopLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Tab3TopLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Tab3TopLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Tab3TopLayoutPanel.Size = new System.Drawing.Size(591, 240);
+            this.Tab3TopLayoutPanel.TabIndex = 24;
+            // 字幕調整の開始・終了・方向を整然と並べるテーブル
             // 
             // ProcessTabControl
             // 
@@ -245,21 +380,9 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.GaijiInfoFilePathLabeltextBox1);
-            this.tabPage1.Controls.Add(this.SelectGaijiInfoFileButton1);
-            this.tabPage1.Controls.Add(this.ReplaceGaijiCheckBox1);
-            this.tabPage1.Controls.Add(this.FilePathLabeltextBox);
+            this.tabPage1.Controls.Add(this.Tab1TopLayoutPanel);
             this.tabPage1.Controls.Add(this.CutResultTextBox1);
             this.tabPage1.Controls.Add(this.OutputButton1);
-            this.tabPage1.Controls.Add(this.DeleteSubtitleCheckBox1);
-            this.tabPage1.Controls.Add(this.SelectSubtitleFileButton);
-            this.tabPage1.Controls.Add(this.TextCountLabel);
-            this.tabPage1.Controls.Add(this.CutEndLabel1);
-            this.tabPage1.Controls.Add(this.CutEndTimeTextBox1);
-            this.tabPage1.Controls.Add(this.CutButton1);
-            this.tabPage1.Controls.Add(this.Namilabel);
-            this.tabPage1.Controls.Add(this.CutStartLabel1);
-            this.tabPage1.Controls.Add(this.CutStartTimeTextBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 27);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -272,16 +395,9 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.CutEndLabel2);
-            this.tabPage2.Controls.Add(this.CutStartLabel2);
+            this.tabPage2.Controls.Add(this.Tab2TopLayoutPanel);
             this.tabPage2.Controls.Add(this.CutResultTextBox2);
             this.tabPage2.Controls.Add(this.OutputButton2);
-            this.tabPage2.Controls.Add(this.CutEndTimeTextBox2);
-            this.tabPage2.Controls.Add(this.Cutbutton2);
-            this.tabPage2.Controls.Add(this.label2);
-            this.tabPage2.Controls.Add(this.CutStartTimeTextBox2);
-            this.tabPage2.Controls.Add(this.MovieFilePathLabelTextBox);
-            this.tabPage2.Controls.Add(this.SelectMovieFileButton);
             this.tabPage2.Location = new System.Drawing.Point(4, 27);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -294,42 +410,46 @@
             // 
             // CutEndLabel2
             // 
-            this.CutEndLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
             this.CutEndLabel2.AutoSize = true;
-            this.CutEndLabel2.Location = new System.Drawing.Point(165, 59);
+            this.CutEndLabel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CutEndLabel2.Location = new System.Drawing.Point(16, 99);
+            this.CutEndLabel2.Margin = new System.Windows.Forms.Padding(6);
             this.CutEndLabel2.Name = "CutEndLabel2";
-            this.CutEndLabel2.Size = new System.Drawing.Size(32, 18);
+            this.CutEndLabel2.Size = new System.Drawing.Size(134, 18);
             this.CutEndLabel2.TabIndex = 18;
             this.CutEndLabel2.Text = "終了";
             // 
             // CutStartLabel2
             // 
-            this.CutStartLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
             this.CutStartLabel2.AutoSize = true;
-            this.CutStartLabel2.Location = new System.Drawing.Point(9, 59);
+            this.CutStartLabel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CutStartLabel2.Location = new System.Drawing.Point(16, 57);
+            this.CutStartLabel2.Margin = new System.Windows.Forms.Padding(6);
             this.CutStartLabel2.Name = "CutStartLabel2";
-            this.CutStartLabel2.Size = new System.Drawing.Size(32, 18);
+            this.CutStartLabel2.Size = new System.Drawing.Size(134, 18);
             this.CutStartLabel2.TabIndex = 17;
             this.CutStartLabel2.Text = "開始";
             // 
             // CutResultTextBox2
             // 
-            this.CutResultTextBox2.Location = new System.Drawing.Point(9, 140);
-            this.CutResultTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CutResultTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CutResultTextBox2.Location = new System.Drawing.Point(3, 119);
+            this.CutResultTextBox2.Margin = new System.Windows.Forms.Padding(10);
             this.CutResultTextBox2.Multiline = true;
             this.CutResultTextBox2.Name = "CutResultTextBox2";
             this.CutResultTextBox2.ReadOnly = true;
-            this.CutResultTextBox2.Size = new System.Drawing.Size(566, 137);
+            this.CutResultTextBox2.Size = new System.Drawing.Size(591, 346);
             this.CutResultTextBox2.TabIndex = 16;
             // 
             // OutputButton2
             // 
-            this.OutputButton2.Location = new System.Drawing.Point(8, 297);
-            this.OutputButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.OutputButton2.AutoSize = true;
+            this.OutputButton2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.OutputButton2.Location = new System.Drawing.Point(3, 469);
+            this.OutputButton2.Margin = new System.Windows.Forms.Padding(10);
             this.OutputButton2.Name = "OutputButton2";
-            this.OutputButton2.Size = new System.Drawing.Size(137, 25);
+            this.OutputButton2.Padding = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.OutputButton2.Size = new System.Drawing.Size(591, 25);
             this.OutputButton2.TabIndex = 15;
             this.OutputButton2.Text = "出力";
             this.OutputButton2.UseVisualStyleBackColor = true;
@@ -337,17 +457,22 @@
             // 
             // CutEndTimeTextBox2
             // 
-            this.CutEndTimeTextBox2.Location = new System.Drawing.Point(165, 80);
+            this.CutEndTimeTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CutEndTimeTextBox2.Location = new System.Drawing.Point(164, 99);
+            this.CutEndTimeTextBox2.Margin = new System.Windows.Forms.Padding(6);
             this.CutEndTimeTextBox2.Name = "CutEndTimeTextBox2";
-            this.CutEndTimeTextBox2.Size = new System.Drawing.Size(124, 25);
+            this.CutEndTimeTextBox2.Size = new System.Drawing.Size(134, 25);
             this.CutEndTimeTextBox2.TabIndex = 14;
             // 
             // Cutbutton2
             // 
-            this.Cutbutton2.Location = new System.Drawing.Point(304, 80);
-            this.Cutbutton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
+            this.Cutbutton2.AutoSize = true;
+            this.Cutbutton2.Dock = System.Windows.Forms.DockStyle.Fill;
+            // ①カット（字幕編集）と同じ視線の流れになるよう下段に配置
+            this.Cutbutton2.Location = new System.Drawing.Point(164, 138);
+            this.Cutbutton2.Margin = new System.Windows.Forms.Padding(6);
             this.Cutbutton2.Name = "Cutbutton2";
-            this.Cutbutton2.Size = new System.Drawing.Size(137, 25);
+            this.Cutbutton2.Size = new System.Drawing.Size(276, 25);
             this.Cutbutton2.TabIndex = 11;
             this.Cutbutton2.Text = "カット編集";
             this.Cutbutton2.UseVisualStyleBackColor = true;
@@ -356,35 +481,41 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(139, 83);
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Location = new System.Drawing.Point(312, 60);
+            this.label2.Margin = new System.Windows.Forms.Padding(6);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(20, 18);
+            this.label2.Size = new System.Drawing.Size(134, 18);
             this.label2.TabIndex = 13;
             this.label2.Text = "～";
             // 
             // CutStartTimeTextBox2
             // 
-            this.CutStartTimeTextBox2.Location = new System.Drawing.Point(9, 80);
+            this.CutStartTimeTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CutStartTimeTextBox2.Location = new System.Drawing.Point(164, 60);
+            this.CutStartTimeTextBox2.Margin = new System.Windows.Forms.Padding(6);
             this.CutStartTimeTextBox2.Name = "CutStartTimeTextBox2";
-            this.CutStartTimeTextBox2.Size = new System.Drawing.Size(124, 25);
+            this.CutStartTimeTextBox2.Size = new System.Drawing.Size(134, 25);
             this.CutStartTimeTextBox2.TabIndex = 12;
             // 
             // MovieFilePathLabelTextBox
             // 
-            this.MovieFilePathLabelTextBox.Location = new System.Drawing.Point(152, 17);
-            this.MovieFilePathLabelTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.MovieFilePathLabelTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MovieFilePathLabelTextBox.Location = new System.Drawing.Point(164, 16);
+            this.MovieFilePathLabelTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.MovieFilePathLabelTextBox.Name = "MovieFilePathLabelTextBox";
             this.MovieFilePathLabelTextBox.ReadOnly = true;
-            this.MovieFilePathLabelTextBox.Size = new System.Drawing.Size(423, 25);
+            this.MovieFilePathLabelTextBox.Size = new System.Drawing.Size(421, 25);
             this.MovieFilePathLabelTextBox.TabIndex = 6;
             // 
             // SelectMovieFileButton
             // 
-            this.SelectMovieFileButton.Location = new System.Drawing.Point(9, 17);
-            this.SelectMovieFileButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
+            this.SelectMovieFileButton.AutoSize = true;
+            this.SelectMovieFileButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SelectMovieFileButton.Location = new System.Drawing.Point(16, 16);
+            this.SelectMovieFileButton.Margin = new System.Windows.Forms.Padding(6);
             this.SelectMovieFileButton.Name = "SelectMovieFileButton";
-            this.SelectMovieFileButton.Size = new System.Drawing.Size(137, 25);
+            this.SelectMovieFileButton.Size = new System.Drawing.Size(134, 25);
             this.SelectMovieFileButton.TabIndex = 4;
             this.SelectMovieFileButton.Text = "動画ファイル選択";
             this.SelectMovieFileButton.UseVisualStyleBackColor = true;
@@ -392,23 +523,9 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.AdjustmentDirectionLabel3);
-            this.tabPage3.Controls.Add(this.OffsetLabel3);
-            this.tabPage3.Controls.Add(this.EditEndLabel3);
-            this.tabPage3.Controls.Add(this.EditStartLabel3);
-            this.tabPage3.Controls.Add(this.TextCountLabel3);
-            this.tabPage3.Controls.Add(this.label4);
-            this.tabPage3.Controls.Add(this.DelayRadioButton);
-            this.tabPage3.Controls.Add(this.ForwardRadioButton);
-            this.tabPage3.Controls.Add(this.OffsetTextBox3);
-            this.tabPage3.Controls.Add(this.FilePathLabeltextBox3);
+            this.tabPage3.Controls.Add(this.Tab3TopLayoutPanel);
             this.tabPage3.Controls.Add(this.EditResultTextBox3);
             this.tabPage3.Controls.Add(this.OutputButton3);
-            this.tabPage3.Controls.Add(this.SelectSubtitleFileButton3);
-            this.tabPage3.Controls.Add(this.EditEndTimeTextBox3);
-            this.tabPage3.Controls.Add(this.EditButton3);
-            this.tabPage3.Controls.Add(this.label3);
-            this.tabPage3.Controls.Add(this.EditStartTimeTextBox3);
             this.tabPage3.Location = new System.Drawing.Point(4, 27);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -419,122 +536,26 @@
             this.tabPage3.AutoScroll = true;
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // AdjustmentDirectionLabel3
-            // 
-            this.AdjustmentDirectionLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
-            this.AdjustmentDirectionLabel3.AutoSize = true;
-            this.AdjustmentDirectionLabel3.Location = new System.Drawing.Point(142, 120);
-            this.AdjustmentDirectionLabel3.Name = "AdjustmentDirectionLabel3";
-            this.AdjustmentDirectionLabel3.Size = new System.Drawing.Size(68, 18);
-            this.AdjustmentDirectionLabel3.TabIndex = 27;
-            this.AdjustmentDirectionLabel3.Text = "調整方向";
-            // 
-            // OffsetLabel3
-            // 
-            this.OffsetLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
-            this.OffsetLabel3.AutoSize = true;
-            // オフセットと調整方向のラベルは開始・終了欄と重ならないように縦方向へ余白を確保する
-            this.OffsetLabel3.Location = new System.Drawing.Point(9, 120);
-            this.OffsetLabel3.Name = "OffsetLabel3";
-            this.OffsetLabel3.Size = new System.Drawing.Size(65, 18);
-            this.OffsetLabel3.TabIndex = 26;
-            this.OffsetLabel3.Text = "オフセット";
-            // 
-            // EditEndLabel3
-            // 
-            this.EditEndLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
-            this.EditEndLabel3.AutoSize = true;
-            this.EditEndLabel3.Location = new System.Drawing.Point(165, 59);
-            this.EditEndLabel3.Name = "EditEndLabel3";
-            this.EditEndLabel3.Size = new System.Drawing.Size(32, 18);
-            this.EditEndLabel3.TabIndex = 25;
-            this.EditEndLabel3.Text = "終了";
-            // 
-            // EditStartLabel3
-            // 
-            this.EditStartLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
-            this.EditStartLabel3.AutoSize = true;
-            this.EditStartLabel3.Location = new System.Drawing.Point(9, 59);
-            this.EditStartLabel3.Name = "EditStartLabel3";
-            this.EditStartLabel3.Size = new System.Drawing.Size(32, 18);
-            this.EditStartLabel3.TabIndex = 24;
-            this.EditStartLabel3.Text = "開始";
-            // 
-            // TextCountLabel3
-            // 
-            this.TextCountLabel3.AutoSize = true;
-            this.TextCountLabel3.Location = new System.Drawing.Point(159, 45);
-            this.TextCountLabel3.Name = "TextCountLabel3";
-            this.TextCountLabel3.Size = new System.Drawing.Size(0, 18);
-            this.TextCountLabel3.TabIndex = 23;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(301, 83);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(204, 18);
-            this.label4.TabIndex = 22;
-            this.label4.Text = "※ 終了を指定しない場合は最後まで";
-            // 
-            // DelayRadioButton
-            // 
-            this.DelayRadioButton.AutoSize = true;
-            this.DelayRadioButton.Location = new System.Drawing.Point(210, 144);
-            this.DelayRadioButton.Name = "DelayRadioButton";
-            this.DelayRadioButton.Size = new System.Drawing.Size(74, 22);
-            this.DelayRadioButton.TabIndex = 21;
-            this.DelayRadioButton.Text = "遅らせる";
-            this.DelayRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // ForwardRadioButton
-            // 
-            this.ForwardRadioButton.AutoSize = true;
-            this.ForwardRadioButton.Checked = true;
-            this.ForwardRadioButton.Location = new System.Drawing.Point(142, 144);
-            this.ForwardRadioButton.Name = "ForwardRadioButton";
-            this.ForwardRadioButton.Size = new System.Drawing.Size(62, 22);
-            this.ForwardRadioButton.TabIndex = 20;
-            this.ForwardRadioButton.TabStop = true;
-            this.ForwardRadioButton.Text = "早める";
-            this.ForwardRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // OffsetTextBox3
-            // 
-            this.OffsetTextBox3.Location = new System.Drawing.Point(9, 141);
-            this.OffsetTextBox3.Name = "OffsetTextBox3";
-            this.OffsetTextBox3.Size = new System.Drawing.Size(124, 25);
-            this.OffsetTextBox3.TabIndex = 19;
-            this.OffsetTextBox3.Text = "00:00:00.000";
-            // 
-            // FilePathLabeltextBox3
-            // 
-            this.FilePathLabeltextBox3.Location = new System.Drawing.Point(152, 17);
-            this.FilePathLabeltextBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.FilePathLabeltextBox3.Name = "FilePathLabeltextBox3";
-            this.FilePathLabeltextBox3.ReadOnly = true;
-            this.FilePathLabeltextBox3.Size = new System.Drawing.Size(423, 25);
-            this.FilePathLabeltextBox3.TabIndex = 12;
-            // 
             // EditResultTextBox3
             // 
-            this.EditResultTextBox3.Location = new System.Drawing.Point(9, 140);
-            this.EditResultTextBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.EditResultTextBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EditResultTextBox3.Location = new System.Drawing.Point(3, 243);
+            this.EditResultTextBox3.Margin = new System.Windows.Forms.Padding(10);
             this.EditResultTextBox3.Multiline = true;
             this.EditResultTextBox3.Name = "EditResultTextBox3";
             this.EditResultTextBox3.ReadOnly = true;
-            this.EditResultTextBox3.Size = new System.Drawing.Size(566, 137);
+            this.EditResultTextBox3.Size = new System.Drawing.Size(591, 226);
             this.EditResultTextBox3.TabIndex = 18;
             // 
             // OutputButton3
             // 
-            this.OutputButton3.Location = new System.Drawing.Point(8, 297);
-            this.OutputButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.OutputButton3.AutoSize = true;
+            this.OutputButton3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.OutputButton3.Location = new System.Drawing.Point(3, 469);
+            this.OutputButton3.Margin = new System.Windows.Forms.Padding(10);
             this.OutputButton3.Name = "OutputButton3";
-            this.OutputButton3.Size = new System.Drawing.Size(137, 25);
+            this.OutputButton3.Padding = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.OutputButton3.Size = new System.Drawing.Size(591, 25);
             this.OutputButton3.TabIndex = 17;
             this.OutputButton3.Text = "出力";
             this.OutputButton3.UseVisualStyleBackColor = true;
@@ -542,48 +563,170 @@
             // 
             // SelectSubtitleFileButton3
             // 
-            this.SelectSubtitleFileButton3.Location = new System.Drawing.Point(9, 17);
-            this.SelectSubtitleFileButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
+            this.SelectSubtitleFileButton3.AutoSize = true;
+            this.SelectSubtitleFileButton3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SelectSubtitleFileButton3.Location = new System.Drawing.Point(16, 16);
+            this.SelectSubtitleFileButton3.Margin = new System.Windows.Forms.Padding(6);
             this.SelectSubtitleFileButton3.Name = "SelectSubtitleFileButton3";
-            this.SelectSubtitleFileButton3.Size = new System.Drawing.Size(137, 25);
+            this.SelectSubtitleFileButton3.Size = new System.Drawing.Size(134, 25);
             this.SelectSubtitleFileButton3.TabIndex = 11;
             this.SelectSubtitleFileButton3.Text = "字幕ファイル選択";
             this.SelectSubtitleFileButton3.UseVisualStyleBackColor = true;
             this.SelectSubtitleFileButton3.Click += new System.EventHandler(this.SelectSubtitleFileButton3_Click);
             // 
+            // FilePathLabeltextBox3
+            // 
+            this.FilePathLabeltextBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FilePathLabeltextBox3.Location = new System.Drawing.Point(164, 16);
+            this.FilePathLabeltextBox3.Margin = new System.Windows.Forms.Padding(6);
+            this.FilePathLabeltextBox3.Name = "FilePathLabeltextBox3";
+            this.FilePathLabeltextBox3.ReadOnly = true;
+            this.FilePathLabeltextBox3.Size = new System.Drawing.Size(421, 25);
+            this.FilePathLabeltextBox3.TabIndex = 12;
+            // 
+            // EditStartLabel3
+            // 
+            this.EditStartLabel3.AutoSize = true;
+            this.EditStartLabel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EditStartLabel3.Location = new System.Drawing.Point(16, 60);
+            this.EditStartLabel3.Margin = new System.Windows.Forms.Padding(6);
+            this.EditStartLabel3.Name = "EditStartLabel3";
+            this.EditStartLabel3.Size = new System.Drawing.Size(134, 18);
+            this.EditStartLabel3.TabIndex = 24;
+            this.EditStartLabel3.Text = "開始";
+            // 
             // EditEndTimeTextBox3
             // 
-            this.EditEndTimeTextBox3.Location = new System.Drawing.Point(165, 80);
+            this.EditEndTimeTextBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EditEndTimeTextBox3.Location = new System.Drawing.Point(164, 99);
+            this.EditEndTimeTextBox3.Margin = new System.Windows.Forms.Padding(6);
             this.EditEndTimeTextBox3.Name = "EditEndTimeTextBox3";
-            this.EditEndTimeTextBox3.Size = new System.Drawing.Size(124, 25);
+            this.EditEndTimeTextBox3.Size = new System.Drawing.Size(134, 25);
             this.EditEndTimeTextBox3.TabIndex = 16;
+            // 
+            // EditEndLabel3
+            // 
+            this.EditEndLabel3.AutoSize = true;
+            this.EditEndLabel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EditEndLabel3.Location = new System.Drawing.Point(16, 99);
+            this.EditEndLabel3.Margin = new System.Windows.Forms.Padding(6);
+            this.EditEndLabel3.Name = "EditEndLabel3";
+            this.EditEndLabel3.Size = new System.Drawing.Size(134, 18);
+            this.EditEndLabel3.TabIndex = 25;
+            this.EditEndLabel3.Text = "終了";
+            // 
+            // AdjustmentDirectionLabel3
+            // 
+            this.AdjustmentDirectionLabel3.AutoSize = true;
+            this.AdjustmentDirectionLabel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AdjustmentDirectionLabel3.Location = new System.Drawing.Point(306, 99);
+            this.AdjustmentDirectionLabel3.Margin = new System.Windows.Forms.Padding(6);
+            this.AdjustmentDirectionLabel3.Name = "AdjustmentDirectionLabel3";
+            this.AdjustmentDirectionLabel3.Size = new System.Drawing.Size(134, 18);
+            this.AdjustmentDirectionLabel3.TabIndex = 27;
+            this.AdjustmentDirectionLabel3.Text = "調整方向";
+            // 
+            // OffsetLabel3
+            // 
+            this.OffsetLabel3.AutoSize = true;
+            // オフセット入力を分かりやすくするための見出しラベル
+            this.OffsetLabel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.OffsetLabel3.Location = new System.Drawing.Point(16, 138);
+            this.OffsetLabel3.Margin = new System.Windows.Forms.Padding(6);
+            this.OffsetLabel3.Name = "OffsetLabel3";
+            this.OffsetLabel3.Size = new System.Drawing.Size(134, 18);
+            this.OffsetLabel3.TabIndex = 26;
+            this.OffsetLabel3.Text = "オフセット";
+            // 
+            // OffsetTextBox3
+            // 
+            this.OffsetTextBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.OffsetTextBox3.Location = new System.Drawing.Point(164, 138);
+            this.OffsetTextBox3.Margin = new System.Windows.Forms.Padding(6);
+            this.OffsetTextBox3.Name = "OffsetTextBox3";
+            this.OffsetTextBox3.Size = new System.Drawing.Size(134, 25);
+            this.OffsetTextBox3.TabIndex = 19;
+            this.OffsetTextBox3.Text = "00:00:00.000";
+            // 
+            // ForwardRadioButton
+            // 
+            this.ForwardRadioButton.AutoSize = true;
+            this.ForwardRadioButton.Checked = true;
+            this.ForwardRadioButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ForwardRadioButton.Location = new System.Drawing.Point(306, 138);
+            this.ForwardRadioButton.Margin = new System.Windows.Forms.Padding(6);
+            this.ForwardRadioButton.Name = "ForwardRadioButton";
+            this.ForwardRadioButton.Size = new System.Drawing.Size(134, 33);
+            this.ForwardRadioButton.TabIndex = 20;
+            this.ForwardRadioButton.TabStop = true;
+            this.ForwardRadioButton.Text = "早める";
+            this.ForwardRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // DelayRadioButton
+            // 
+            this.DelayRadioButton.AutoSize = true;
+            this.DelayRadioButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DelayRadioButton.Location = new System.Drawing.Point(456, 138);
+            this.DelayRadioButton.Margin = new System.Windows.Forms.Padding(6);
+            this.DelayRadioButton.Name = "DelayRadioButton";
+            this.DelayRadioButton.Size = new System.Drawing.Size(129, 33);
+            this.DelayRadioButton.TabIndex = 21;
+            this.DelayRadioButton.Text = "遅らせる";
+            this.DelayRadioButton.UseVisualStyleBackColor = true;
             // 
             // EditButton3
             // 
-            this.EditButton3.Location = new System.Drawing.Point(304, 141);
-            // 編集ボタンもリサイズ時に動かないよう左基準で固定
-            this.EditButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
+            this.EditButton3.AutoSize = true;
+            this.EditButton3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EditButton3.Location = new System.Drawing.Point(456, 177);
+            // 編集ボタンもテーブル上で横幅を揃え、リサイズ時の位置を安定させる
+            this.EditButton3.Margin = new System.Windows.Forms.Padding(6);
             this.EditButton3.Name = "EditButton3";
-            this.EditButton3.Size = new System.Drawing.Size(137, 25);
+            this.EditButton3.Size = new System.Drawing.Size(129, 30);
             this.EditButton3.TabIndex = 13;
             this.EditButton3.Text = "編集";
             this.EditButton3.UseVisualStyleBackColor = true;
             this.EditButton3.Click += new System.EventHandler(this.EditButton3_Click);
             // 
+            // TextCountLabel3
+            // 
+            this.TextCountLabel3.AutoSize = true;
+            this.TextCountLabel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TextCountLabel3.Location = new System.Drawing.Point(164, 177);
+            this.TextCountLabel3.Margin = new System.Windows.Forms.Padding(6);
+            this.TextCountLabel3.Name = "TextCountLabel3";
+            this.TextCountLabel3.Size = new System.Drawing.Size(276, 18);
+            this.TextCountLabel3.TabIndex = 23;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Location = new System.Drawing.Point(164, 213);
+            this.label4.Margin = new System.Windows.Forms.Padding(6);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(276, 18);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "※ 終了を指定しない場合は最後まで";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(139, 83);
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Location = new System.Drawing.Point(306, 60);
+            this.label3.Margin = new System.Windows.Forms.Padding(6);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(20, 18);
+            this.label3.Size = new System.Drawing.Size(134, 18);
             this.label3.TabIndex = 15;
             this.label3.Text = "～";
             // 
             // EditStartTimeTextBox3
             // 
-            this.EditStartTimeTextBox3.Location = new System.Drawing.Point(9, 80);
+            this.EditStartTimeTextBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EditStartTimeTextBox3.Location = new System.Drawing.Point(164, 60);
+            this.EditStartTimeTextBox3.Margin = new System.Windows.Forms.Padding(6);
             this.EditStartTimeTextBox3.Name = "EditStartTimeTextBox3";
-            this.EditStartTimeTextBox3.Size = new System.Drawing.Size(124, 25);
+            this.EditStartTimeTextBox3.Size = new System.Drawing.Size(134, 25);
             this.EditStartTimeTextBox3.TabIndex = 14;
             this.EditStartTimeTextBox3.Text = "00:00:00.000";
             // 
@@ -670,30 +813,34 @@
             this.ReplaceGaijiCheckBox1.AutoSize = true;
             this.ReplaceGaijiCheckBox1.Checked = true;
             this.ReplaceGaijiCheckBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ReplaceGaijiCheckBox1.Location = new System.Drawing.Point(9, 140);
+            this.ReplaceGaijiCheckBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ReplaceGaijiCheckBox1.Location = new System.Drawing.Point(16, 211);
+            this.ReplaceGaijiCheckBox1.Margin = new System.Windows.Forms.Padding(6);
             this.ReplaceGaijiCheckBox1.Name = "ReplaceGaijiCheckBox1";
-            this.ReplaceGaijiCheckBox1.Size = new System.Drawing.Size(195, 22);
+            this.ReplaceGaijiCheckBox1.Size = new System.Drawing.Size(559, 22);
             this.ReplaceGaijiCheckBox1.TabIndex = 11;
-            this.ReplaceGaijiCheckBox1.Text = "外字が含まれる場合は置換する\r\n";
+            this.ReplaceGaijiCheckBox1.Text = "外字が含まれる場合は置換する";
             this.ReplaceGaijiCheckBox1.UseVisualStyleBackColor = true;
             this.ReplaceGaijiCheckBox1.CheckedChanged += new System.EventHandler(this.ReplaceGaijiCheckBox1_CheckedChanged);
             // 
             // GaijiInfoFilePathLabeltextBox1
             // 
-            this.GaijiInfoFilePathLabeltextBox1.Location = new System.Drawing.Point(152, 167);
-            this.GaijiInfoFilePathLabeltextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.GaijiInfoFilePathLabeltextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GaijiInfoFilePathLabeltextBox1.Location = new System.Drawing.Point(164, 245);
+            this.GaijiInfoFilePathLabeltextBox1.Margin = new System.Windows.Forms.Padding(6);
             this.GaijiInfoFilePathLabeltextBox1.Name = "GaijiInfoFilePathLabeltextBox1";
             this.GaijiInfoFilePathLabeltextBox1.ReadOnly = true;
-            this.GaijiInfoFilePathLabeltextBox1.Size = new System.Drawing.Size(423, 25);
+            this.GaijiInfoFilePathLabeltextBox1.Size = new System.Drawing.Size(429, 25);
             this.GaijiInfoFilePathLabeltextBox1.TabIndex = 18;
             // 
             // SelectGaijiInfoFileButton1
             // 
-            this.SelectGaijiInfoFileButton1.Location = new System.Drawing.Point(9, 167);
-            this.SelectGaijiInfoFileButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
+            this.SelectGaijiInfoFileButton1.AutoSize = true;
+            this.SelectGaijiInfoFileButton1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SelectGaijiInfoFileButton1.Location = new System.Drawing.Point(16, 245);
+            this.SelectGaijiInfoFileButton1.Margin = new System.Windows.Forms.Padding(6);
             this.SelectGaijiInfoFileButton1.Name = "SelectGaijiInfoFileButton1";
-            this.SelectGaijiInfoFileButton1.Size = new System.Drawing.Size(137, 25);
+            this.SelectGaijiInfoFileButton1.Size = new System.Drawing.Size(134, 25);
             this.SelectGaijiInfoFileButton1.TabIndex = 17;
             this.SelectGaijiInfoFileButton1.Text = "外字情報ファイル選択";
             this.SelectGaijiInfoFileButton1.UseVisualStyleBackColor = true;
@@ -716,11 +863,14 @@
             this.UnsavedChangesPanel.PerformLayout();
             this.ProcessTabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.Tab1TopLayoutPanel.ResumeLayout(false);
+            this.Tab1TopLayoutPanel.PerformLayout();
             this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            this.Tab2TopLayoutPanel.ResumeLayout(false);
+            this.Tab2TopLayoutPanel.PerformLayout();
             this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
+            this.Tab3TopLayoutPanel.ResumeLayout(false);
+            this.Tab3TopLayoutPanel.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             this.ResumeLayout(false);
@@ -784,5 +934,8 @@
         private System.Windows.Forms.TextBox GaijiInfoFilePathLabeltextBox1;
         private System.Windows.Forms.Button SelectGaijiInfoFileButton1;
         private System.Windows.Forms.CheckBox ReplaceGaijiCheckBox1;
+        private System.Windows.Forms.TableLayoutPanel Tab1TopLayoutPanel;
+        private System.Windows.Forms.TableLayoutPanel Tab2TopLayoutPanel;
+        private System.Windows.Forms.TableLayoutPanel Tab3TopLayoutPanel;
     }
 }
