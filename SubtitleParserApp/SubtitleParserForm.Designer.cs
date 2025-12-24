@@ -819,5 +819,8 @@
         private System.Windows.Forms.TextBox GaijiInfoFilePathLabeltextBox1;
         private System.Windows.Forms.Button SelectGaijiInfoFileButton1;
         private System.Windows.Forms.CheckBox ReplaceGaijiCheckBox1;
+        private System.Windows.Forms.TableLayoutPanel Tab1TopLayoutPanel;
+        private System.Windows.Forms.TableLayoutPanel Tab2TopLayoutPanel;
+        private System.Windows.Forms.TableLayoutPanel Tab3TopLayoutPanel;
     }
 }
